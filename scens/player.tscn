@@ -5,13 +5,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs3jq"]
 size = Vector2(40, 40)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sssh"]
+size = Vector2(28, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nulb"]
+size = Vector2(46, 45)
+
 [node name="player" type="CharacterBody2D" unique_id=1623358484]
 script = ExtResource("1_0sssh")
 speed = null
-combo_reset_time = null
-attack_cooldown = null
-max_health = null
-invincibility_time = null
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1698501449]
 offset_right = 40.0
@@ -20,3 +22,16 @@ offset_bottom = 40.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=16745951]
 position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_gs3jq")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=2141478937]
+
+[node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=553692600]
+position = Vector2(61, 17)
+shape = SubResource("RectangleShape2D_0sssh")
+debug_color = Color(1, 0, 0.1095183, 0.41960785)
+
+[node name="hurtbox" type="Area2D" parent="." unique_id=1192867112]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=299084263]
+position = Vector2(20, 19.5)
+shape = SubResource("RectangleShape2D_6nulb")

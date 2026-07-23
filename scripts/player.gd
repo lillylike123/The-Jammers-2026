@@ -31,7 +31,7 @@ var is_attack_hitbox_active: bool = false
 const HITBOX_OFFSET: float = 40.0
 const ATTACK_HITBOX_DURATION: float = 0.15
 
-const ARROW_SCENE: PackedScene = preload()
+#const ARROW_SCENE: PackedScene = #preload()
 
 signal health_changed(current: int, max: int)
 signal weapon_changed(weapon: Weapon)
@@ -129,7 +129,7 @@ func _update_movement_animation(input_direction: Vector2) -> void:
 		anim.play("run" + suffix)
 
 func _perform_attack() -> void:
-	# Unarmed has no attack — bare hands don't do combat in this setup.
+	
 	if current_weapon == Weapon.NONE:
 		return
 
