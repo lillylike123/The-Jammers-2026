@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdr8of1b3brrp"
-path="res://.godot/imported/statue spritesheet alt no green.png-7ec44c5038e3cb69baa4fd18c27335f0.ctex"
+uid="uid://uv5ljostr43e"
+path="res://.godot/imported/statue spritesheet alt no green.png-2417097e1976a24c8a9d181064b7a55c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/statue spritesheet alt no green.png"
-dest_files=["res://.godot/imported/statue spritesheet alt no green.png-7ec44c5038e3cb69baa4fd18c27335f0.ctex"]
+source_file="res://assets/statue spritesheet alt no green.png"
+dest_files=["res://.godot/imported/statue spritesheet alt no green.png-2417097e1976a24c8a9d181064b7a55c.ctex"]
 
 [params]
 
