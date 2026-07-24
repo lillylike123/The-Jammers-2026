@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://dqw0jykn1k8dm"]
+
+[ext_resource type="Script" uid="uid://c8us1egcuov17" path="res://scripts/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dahbgdcwtct7p" path="res://Assets/room_example_gmtk.png" id="2_bqqt6"]
+[ext_resource type="FontFile" uid="uid://rr1v8awnxujs" path="res://DungeonFont.ttf" id="2_fu7sn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+expand_margin_top = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+content_margin_left = 0.0
+content_margin_top = 5.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+content_margin_left = 1.0
+content_margin_top = 5.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.37254903)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
+content_margin_left = 4.0
+content_margin_top = 5.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="main_menu" type="Node2D" unique_id=2063191222]
+script = ExtResource("1_fu7sn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1076533411]
+custom_maximum_size = Vector2(256, 144)
+offset_right = 256.0
+offset_bottom = 144.0
+texture = ExtResource("2_bqqt6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2055917538]
+custom_minimum_size = Vector2(256, 144)
+offset_right = 256.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 0.1764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2054288494]
+custom_minimum_size = Vector2(100, 130)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_right = 192.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1421535386]
+custom_minimum_size = Vector2(100, 130)
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1456052167]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer" unique_id=76350977]
+custom_minimum_size = Vector2(10, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8qtwp")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer" unique_id=1304879775]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer2" unique_id=1872193396]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 11
+text = "Dungon Master"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer2" unique_id=28489848]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 7
+text = "Placeholder"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1271521583]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1998565831]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="CenterContainer/VBoxContainer" unique_id=520748168]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=318368531]
+custom_minimum_size = Vector2(10, 10)
+custom_maximum_size = Vector2(50, -1)
+offset_left = 102.0
+offset_top = 54.0
+offset_right = 152.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="." unique_id=1802489957]
+custom_minimum_size = Vector2(10, 10)
+custom_maximum_size = Vector2(40, -1)
+offset_left = 108.0
+offset_top = 82.0
+offset_right = 148.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_glbon")
+text = "Settings"
+
+[node name="Button3" type="Button" parent="." unique_id=2035309486]
+custom_minimum_size = Vector2(10, 10)
+custom_maximum_size = Vector2(500, -1)
+offset_left = 116.0
+offset_top = 110.0
+offset_right = 139.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+text = "Quit"

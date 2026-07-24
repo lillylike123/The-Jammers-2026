@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtky8j7bn8e6"
-path="res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"
+uid="uid://doks4tp34ff4s"
+path="res://.godot/imported/Dungeon-Top-Down-2D-Game-Tileset3.webp-f7caafb313e1bfa635f3ae46cd9ebf8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Slime-export.png"
-dest_files=["res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"]
+source_file="res://the-jammers-2026-main/Dungeon-Top-Down-2D-Game-Tileset3.webp"
+dest_files=["res://.godot/imported/Dungeon-Top-Down-2D-Game-Tileset3.webp-f7caafb313e1bfa635f3ae46cd9ebf8b.ctex"]
 
 [params]
 

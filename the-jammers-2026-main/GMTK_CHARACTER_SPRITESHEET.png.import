@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtky8j7bn8e6"
-path="res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"
+uid="uid://ddtbp0k8xfo66"
+path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-508fe71b7b3c86aef730410e26b6986d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Slime-export.png"
-dest_files=["res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"]
+source_file="res://the-jammers-2026-main/GMTK_CHARACTER_SPRITESHEET.png"
+dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-508fe71b7b3c86aef730410e26b6986d.ctex"]
 
 [params]
 

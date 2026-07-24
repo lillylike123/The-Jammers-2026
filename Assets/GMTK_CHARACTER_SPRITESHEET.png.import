@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dre52m6bpyjnp"
-path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-d879cd782a82b7c4cb6e1b9bdf42edad.ctex"
+path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GMTK_CHARACTER_SPRITESHEET.png"
-dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-d879cd782a82b7c4cb6e1b9bdf42edad.ctex"]
+source_file="res://Assets/GMTK_CHARACTER_SPRITESHEET.png"
+dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"]
 
 [params]
 

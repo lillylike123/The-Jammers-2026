@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtky8j7bn8e6"
-path="res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"
+uid="uid://bxh4kdhimawsi"
+path="res://.godot/imported/room_example2.png-534545ee517cdf11b34cb77a915016f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Slime-export.png"
-dest_files=["res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"]
+source_file="res://room_example2.png"
+dest_files=["res://.godot/imported/room_example2.png-534545ee517cdf11b34cb77a915016f9.ctex"]
 
 [params]
 
