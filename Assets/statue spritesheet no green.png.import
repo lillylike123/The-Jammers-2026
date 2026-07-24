@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtky8j7bn8e6"
-path="res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"
+uid="uid://vnb1dlxg7sv5"
+path="res://.godot/imported/statue spritesheet no green.png-5d4543e4f1a47079acfda07c405b83be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blue Slime-export.png"
-dest_files=["res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"]
+source_file="res://Assets/statue spritesheet no green.png"
+dest_files=["res://.godot/imported/statue spritesheet no green.png-5d4543e4f1a47079acfda07c405b83be.ctex"]
 
 [params]
 

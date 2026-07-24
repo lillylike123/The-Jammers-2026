@@ -1,0 +1,497 @@
+[gd_scene format=3 uid="uid://ly6xf6oolulg"]
+
+[ext_resource type="Script" uid="uid://dmumqbkxyg7ov" path="res://scripts/weapon_select.gd" id="1_4qi0g"]
+[ext_resource type="Texture2D" uid="uid://bxh4kdhimawsi" path="res://room_example2.png" id="2_a7qvo"]
+[ext_resource type="FontFile" uid="uid://rr1v8awnxujs" path="res://DungeonFont.ttf" id="2_ija7c"]
+[ext_resource type="Texture2D" uid="uid://ddtbp0k8xfo66" path="res://the-jammers-2026-main/GMTK_CHARACTER_SPRITESHEET.png" id="3_ija7c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qi0g"]
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhk5q"]
+bg_color = Color(0, 0, 0, 0.75686276)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qw2x"]
+bg_color = Color(0.95686275, 0, 0, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghgih"]
+bg_color = Color(0, 0, 0, 0.8352941)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rresx"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78qe6"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5pnj"]
+content_margin_left = 1.0
+content_margin_top = 2.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 13
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qi0g"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrun8"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v08xp"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr28t"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw0ex"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqwto"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8i0w"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esoce"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hio12"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(320, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgfej"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(384, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq08y"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nx2n"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7eg85"]
+atlas = ExtResource("3_ija7c")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rresx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qi0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrun8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v08xp")
+}],
+"loop": 1,
+"name": &"bow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr28t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw0ex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqwto")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8i0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esoce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hio12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgfej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq08y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nx2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7eg85")
+}],
+"loop": 1,
+"name": &"sword",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1322505882]
+script = ExtResource("1_4qi0g")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2111736410]
+custom_maximum_size = Vector2(256, 144)
+offset_right = 256.0
+offset_bottom = 144.0
+texture = ExtResource("2_a7qvo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1384108947]
+custom_minimum_size = Vector2(256, 144)
+custom_maximum_size = Vector2(256, 144)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.14509805)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=850177189]
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 168.0
+offset_bottom = 31.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1481000099]
+custom_minimum_size = Vector2(150, 60)
+custom_maximum_size = Vector2(100, 19)
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer" unique_id=92069301]
+custom_minimum_size = Vector2(100, 19)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4qi0g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer" unique_id=328225800]
+custom_minimum_size = Vector2(100, 19)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=595181332]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+text = "Choose Your Weapon"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=842062023]
+custom_maximum_size = Vector2(100, 30)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 101.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer2" unique_id=1006913384]
+custom_maximum_size = Vector2(50, 19)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer2/VBoxContainer" unique_id=588758553]
+custom_minimum_size = Vector2(200, 60)
+custom_maximum_size = Vector2(50, 19)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhk5q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer2/VBoxContainer/PanelContainer" unique_id=1174282433]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(50, 19)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer2/VBoxContainer/PanelContainer/VBoxContainer" unique_id=319602303]
+custom_maximum_size = Vector2(100, 19)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+text = "Sword"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="CenterContainer4" type="CenterContainer" parent="." unique_id=1272202813]
+custom_maximum_size = Vector2(150, 70)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = 49.0
+offset_right = 128.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer4" unique_id=1996038568]
+custom_minimum_size = Vector2(200, 0)
+custom_maximum_size = Vector2(100, 70)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer4/VBoxContainer" unique_id=1272887301]
+custom_minimum_size = Vector2(410, 350)
+custom_maximum_size = Vector2(100, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2qw2x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer4/VBoxContainer/PanelContainer" unique_id=574739006]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(100, 70)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer4/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1336359396]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+text = "Damage:
+
+Range:
+
+Speed:"
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="CenterContainer3" type="CenterContainer" parent="." unique_id=776015392]
+custom_maximum_size = Vector2(100, 30)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 113.0
+offset_top = 25.0
+offset_right = 213.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer3" unique_id=1452650415]
+custom_maximum_size = Vector2(50, 19)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer3/VBoxContainer" unique_id=295531082]
+custom_minimum_size = Vector2(200, 60)
+custom_maximum_size = Vector2(50, 19)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ghgih")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer3/VBoxContainer/PanelContainer" unique_id=2031212909]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(50, 19)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer3/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1670831600]
+custom_maximum_size = Vector2(100, 19)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+text = "Bow"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="CenterContainer6" type="CenterContainer" parent="." unique_id=429800785]
+custom_maximum_size = Vector2(150, 70)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 48.0
+offset_right = 238.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer6" unique_id=41198245]
+custom_minimum_size = Vector2(200, 0)
+custom_maximum_size = Vector2(100, 70)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer6/VBoxContainer" unique_id=431052525]
+custom_minimum_size = Vector2(410, 350)
+custom_maximum_size = Vector2(100, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2qw2x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer6/VBoxContainer/PanelContainer" unique_id=455866046]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(100, 70)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer6/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1753322031]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+text = "Damage:
+
+Range:
+
+Speed:"
+vertical_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=1814061900]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(100, 50)
+offset_left = 42.0
+offset_top = 58.0
+offset_right = 78.0
+offset_bottom = 63.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rresx")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1513346264]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 40.0
+offset_top = 56.0
+offset_right = 95.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_78qe6")
+
+[node name="Panel3" type="Panel" parent="." unique_id=300770701]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(100, 50)
+offset_left = 42.0
+offset_top = 82.0
+offset_right = 56.0
+offset_bottom = 87.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rresx")
+
+[node name="Panel4" type="Panel" parent="." unique_id=1479241277]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 95.0
+offset_bottom = 88.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_78qe6")
+
+[node name="Panel5" type="Panel" parent="." unique_id=2023140614]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(100, 50)
+offset_left = 42.0
+offset_top = 106.0
+offset_right = 68.0
+offset_bottom = 111.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rresx")
+
+[node name="Panel6" type="Panel" parent="." unique_id=266890096]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 40.0
+offset_top = 104.0
+offset_right = 95.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_78qe6")
+
+[node name="Panel13" type="Panel" parent="." unique_id=580864997]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(100, 50)
+offset_left = 154.0
+offset_top = 56.0
+offset_right = 184.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rresx")
+
+[node name="Panel14" type="Panel" parent="." unique_id=138959920]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 152.0
+offset_top = 54.0
+offset_right = 207.0
+offset_bottom = 62.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_78qe6")
+
+[node name="Panel15" type="Panel" parent="." unique_id=310899509]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(100, 50)
+offset_left = 154.0
+offset_top = 80.0
+offset_right = 192.0
+offset_bottom = 85.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rresx")
+
+[node name="Panel16" type="Panel" parent="." unique_id=64190511]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 152.0
+offset_top = 78.0
+offset_right = 207.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_78qe6")
+
+[node name="Panel17" type="Panel" parent="." unique_id=1924213666]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(100, 50)
+offset_left = 154.0
+offset_top = 104.0
+offset_right = 184.0
+offset_bottom = 109.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rresx")
+
+[node name="Panel18" type="Panel" parent="." unique_id=1594831521]
+custom_maximum_size = Vector2(100, 50)
+offset_left = 152.0
+offset_top = 102.0
+offset_right = 207.0
+offset_bottom = 110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_78qe6")
+
+[node name="Button" type="Button" parent="." unique_id=995345174]
+offset_left = 35.99709
+offset_top = 119.0
+offset_right = 69.19292
+offset_bottom = 134.1687
+rotation = -0.0008658017
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5pnj")
+text = "Select"
+
+[node name="Button2" type="Button" parent="." unique_id=1549247604]
+offset_left = 148.00002
+offset_top = 117.99999
+offset_right = 180.952
+offset_bottom = 133.1687
+rotation = -0.0008658017
+theme_override_fonts/font = ExtResource("2_ija7c")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5pnj")
+text = "Select"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=694636580]
+position = Vector2(231, 66)
+sprite_frames = SubResource("SpriteFrames_rresx")
