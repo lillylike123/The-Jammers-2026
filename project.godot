@@ -19,10 +19,19 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=256
 window/size/viewport_height=144
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [editor]
 
 movie_writer/movie_file="D:/KHAPILESH/game/jame gam/hmmmm/recording_10.ogv"
+
+[importer_defaults]
+
+font_data_dynamic={
+&"antialiasing": 0,
+&"subpixel_positioning": 0
+}
 
 [physics]
 
