@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://86ijdos4qb7a" path="res://Assets/button_2.PNG" id="7_8vkjj"]
 [ext_resource type="Texture2D" uid="uid://b4b0tmoa64m0m" path="res://Assets/GMTK_CHARACTER_SPRITESHEET.png" id="8_2aiol"]
 [ext_resource type="Texture2D" uid="uid://dxpmc4mbdk1rq" path="res://Assets/button_red.PNG" id="10_xriy8"]
+[ext_resource type="AudioStream" uid="uid://dufnjbuainupa" path="res://sfx_2.wav" id="11_8vkjj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smehm"]
 texture = ExtResource("3_j7lel")
@@ -517,9 +518,13 @@ animation = &"bow"
 [node name="Button3" type="Button" parent="." unique_id=1563660879]
 offset_left = 9.0
 offset_top = 7.0
-offset_right = 39.0
+offset_right = 43.0
 offset_bottom = 21.0
 theme_override_fonts/font = ExtResource("2_ija7c")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxTexture_8vkjj")
 text = "Back"
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1779889177]
+stream = ExtResource("11_8vkjj")
+volume_db = 24.0
