@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b0tmoa64m0m"
-path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"
+uid="uid://bgr2a5u2jn8gq"
+path="res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GMTK_CHARACTER_SPRITESHEET.png"
-dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"]
+source_file="res://Assets/Blue Slime-export.png"
+dest_files=["res://.godot/imported/Blue Slime-export.png-0f3f1bcdf119905d9ab943d61329b28b.ctex"]
 
 [params]
 

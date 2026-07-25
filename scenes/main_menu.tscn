@@ -1,50 +1,28 @@
 [gd_scene format=3 uid="uid://dqw0jykn1k8dm"]
 
 [ext_resource type="Script" uid="uid://c8us1egcuov17" path="res://scripts/main_menu.gd" id="1_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://dahbgdcwtct7p" path="res://Assets/room_example_gmtk.png" id="2_bqqt6"]
-[ext_resource type="FontFile" uid="uid://rr1v8awnxujs" path="res://DungeonFont.ttf" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://ymb2n61ha6kl" path="res://Assets/room_example_gmtk.png" id="2_bqqt6"]
+[ext_resource type="FontFile" uid="uid://pp6chplqw1kt" path="res://DungeonFont.ttf" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://86ijdos4qb7a" path="res://Assets/button_2.PNG" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dxpmc4mbdk1rq" path="res://Assets/button_red.PNG" id="5_rtw2f"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
-bg_color = Color(0, 0, 0, 0.39215687)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86ype"]
+texture = ExtResource("3_8ln24")
+expand_margin_left = 2.0
 expand_margin_top = 3.0
+expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
-content_margin_left = 0.0
-content_margin_top = 5.0
-content_margin_right = 0.0
-content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.39215687)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
+texture = ExtResource("5_rtw2f")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
-content_margin_left = 1.0
-content_margin_top = 5.0
-content_margin_right = 0.0
-content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.37254903)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
+texture = ExtResource("5_rtw2f")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
-content_margin_left = 4.0
-content_margin_top = 5.0
-content_margin_right = 3.0
-content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.39215687)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ln24"]
+texture = ExtResource("5_rtw2f")
 
 [node name="main_menu" type="Node2D" unique_id=2063191222]
 script = ExtResource("1_fu7sn")
@@ -81,9 +59,9 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer" unique_id=76350977]
-custom_minimum_size = Vector2(10, 1)
+custom_minimum_size = Vector2(15, 20)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8qtwp")
+theme_override_styles/panel = SubResource("StyleBoxTexture_86ype")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer" unique_id=1304879775]
 custom_minimum_size = Vector2(10, 10)
@@ -128,29 +106,29 @@ offset_right = 152.0
 offset_bottom = 65.0
 theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bqqt6")
 text = "Start Game"
 
 [node name="Button2" type="Button" parent="." unique_id=1802489957]
 custom_minimum_size = Vector2(10, 10)
 custom_maximum_size = Vector2(40, -1)
-offset_left = 108.0
+offset_left = 105.0
 offset_top = 82.0
-offset_right = 148.0
+offset_right = 145.0
 offset_bottom = 94.0
 theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wu84c")
 text = "Settings"
 
 [node name="Button3" type="Button" parent="." unique_id=2035309486]
 custom_minimum_size = Vector2(10, 10)
 custom_maximum_size = Vector2(500, -1)
-offset_left = 116.0
+offset_left = 112.0
 offset_top = 110.0
 offset_right = 139.0
 offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8ln24")
 text = "Quit"

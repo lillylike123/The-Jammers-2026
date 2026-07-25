@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b0tmoa64m0m"
-path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"
+uid="uid://dxrdytptklar4"
+path="res://.godot/imported/boxes.PNG-e71042d2138953b31c56e2a69274b53c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GMTK_CHARACTER_SPRITESHEET.png"
-dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"]
+source_file="res://Assets/boxes.PNG"
+dest_files=["res://.godot/imported/boxes.PNG-e71042d2138953b31c56e2a69274b53c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b0tmoa64m0m"
-path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"
+uid="uid://b2p7a2xvmto5e"
+path="res://.godot/imported/statue spritesheet no green.png-5d4543e4f1a47079acfda07c405b83be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GMTK_CHARACTER_SPRITESHEET.png"
-dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"]
+source_file="res://Assets/statue spritesheet no green.png"
+dest_files=["res://.godot/imported/statue spritesheet no green.png-5d4543e4f1a47079acfda07c405b83be.ctex"]
 
 [params]
 

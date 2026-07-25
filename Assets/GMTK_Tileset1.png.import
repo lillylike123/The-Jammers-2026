@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b0tmoa64m0m"
-path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"
+uid="uid://b710g5thdlcjr"
+path="res://.godot/imported/GMTK_Tileset1.png-8e4cc60104ee843021f2b6fc5781cd45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GMTK_CHARACTER_SPRITESHEET.png"
-dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"]
+source_file="res://Assets/GMTK_Tileset1.png"
+dest_files=["res://.godot/imported/GMTK_Tileset1.png-8e4cc60104ee843021f2b6fc5781cd45.ctex"]
 
 [params]
 

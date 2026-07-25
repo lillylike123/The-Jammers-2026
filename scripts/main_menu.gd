@@ -1,12 +1,16 @@
 extends Node2D
 @onready var start: Button=$Button
-
+@onready var Settings: Button = $Button2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	start.pressed.connect(move_to_weapon_select)
+	Settings.pressed.connect(move_to_settings)
 
 func move_to_weapon_select():
-	get_tree().change_scene_to_file("res://the-jammers-2026-main/weapon_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/weapon_select.tscn")
+	
+func move_to_settings():
+	get_tree().change_scene_to_file("res://scenes/settings.tscn")
 
 
 

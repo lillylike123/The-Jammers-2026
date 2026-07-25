@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://danv6ivxumets"]
 
 [ext_resource type="Script" uid="uid://dg5004sjjcaiu" path="res://scripts/player.gd" id="1_0sssh"]
-[ext_resource type="Texture2D" uid="uid://dre52m6bpyjnp" path="res://assets/GMTK_CHARACTER_SPRITESHEET.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://b4b0tmoa64m0m" path="res://Assets/GMTK_CHARACTER_SPRITESHEET.png" id="2_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
@@ -407,7 +407,7 @@ script = ExtResource("1_0sssh")
 speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1275553514]
-position = Vector2(-35, 23)
+position = Vector2(-35, 20)
 sprite_frames = SubResource("SpriteFrames_13ly6")
 animation = &"walk_right"
 

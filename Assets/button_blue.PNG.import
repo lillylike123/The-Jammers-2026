@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b0tmoa64m0m"
-path="res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"
+uid="uid://6mq3w48xnoud"
+path="res://.godot/imported/button_blue.PNG-b11a3024bb24379fe6c85903b7fe67e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GMTK_CHARACTER_SPRITESHEET.png"
-dest_files=["res://.godot/imported/GMTK_CHARACTER_SPRITESHEET.png-b703235f09abe0a2da62e723447e81f1.ctex"]
+source_file="res://Assets/button_blue.PNG"
+dest_files=["res://.godot/imported/button_blue.PNG-b11a3024bb24379fe6c85903b7fe67e5.ctex"]
 
 [params]
 
