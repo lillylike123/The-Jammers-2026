@@ -6,14 +6,16 @@ extends CharacterBody2D
 @export var max_health: int = 100
 @export var invincibility_time: float = 0.5
 
-@onready var hitbox: Area2D = $Hitbox
-@onready var hitbox_shape: CollisionShape2D = $Hitbox/CollisionShape2D
-@onready var hurtbox: Area2D = $Hurtbox
+@onready var hitbox: Area2D = $hitbox
+@onready var hitbox_shape: CollisionShape2D = $hitbox/hitbox_shape
+@onready var hurtbox: Area2D = $hurtbox
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 enum Weapon { NONE, SWORD, BOW }
+enum Facing { FRONT, BACK, LEFT, RIGHT }
 
 var last_direction: Vector2 = Vector2.DOWN
+var facing: Facing = Facing.FRONT
 var combo_step: int = 0
 var can_attack: bool = true
 var is_attacking: bool = false
@@ -31,7 +33,7 @@ var is_attack_hitbox_active: bool = false
 const HITBOX_OFFSET: float = 40.0
 const ATTACK_HITBOX_DURATION: float = 0.15
 
-#const ARROW_SCENE: PackedScene = #preload()
+const ARROW_SCENE: PackedScene = preload("res://scenes/arrow.tscn")
 
 signal health_changed(current: int, max: int)
 signal weapon_changed(weapon: Weapon)
@@ -109,27 +111,32 @@ func _update_timers(delta: float) -> void:
 			attack_active_elapsed = 0.0
 
 func _update_facing(direction: Vector2) -> void:
-	if direction.x != 0:
-		anim.flip_h = direction.x < 0
+	if abs(direction.x) > abs(direction.y):
+		facing = Facing.RIGHT if direction.x > 0 else Facing.LEFT
+	else:
+		facing = Facing.BACK if direction.y < 0 else Facing.FRONT
 
-func _weapon_suffix() -> String:
-	match current_weapon:
-		Weapon.SWORD:
-			return "_sword"
-		Weapon.BOW:
-			return "_bow"
+func _facing_suffix() -> String:
+	match facing:
+		Facing.BACK:
+			return "back"
+		Facing.LEFT:
+			return "left"
+		Facing.RIGHT:
+			return "right"
 		_:
-			return ""
+			return "front"
 
 func _update_movement_animation(input_direction: Vector2) -> void:
-	var suffix := _weapon_suffix()
+	var dir_suffix := _facing_suffix()
 	if input_direction == Vector2.ZERO:
-		anim.play("idle" + suffix)
+		anim.play("idle_" + dir_suffix)
+	elif current_weapon == Weapon.SWORD:
+		anim.play("walk_with_sword_" + dir_suffix)
 	else:
-		anim.play("run" + suffix)
+		anim.play("walk_" + dir_suffix)
 
 func _perform_attack() -> void:
-	
 	if current_weapon == Weapon.NONE:
 		return
 
@@ -143,14 +150,17 @@ func _perform_attack() -> void:
 
 	if current_weapon == Weapon.BOW:
 		_fire_arrow()
-		anim.play("atk" + str(combo_step) + "_bow")
+		anim.play("attack_bow_" + _facing_suffix())
 	else:
 		_position_hitbox()
 		hitbox.monitoring = true
 		hitbox.scale = Vector2(1.2, 1.2) if combo_step == 2 else Vector2(1.0, 1.0)
 		is_attack_hitbox_active = true
 		attack_active_elapsed = 0.0
-		anim.play("atk" + str(combo_step) + "_sword")
+		anim.play("attack_sword")
+
+func _play_kill_animation() -> void:
+	anim.play("attack_sword_kill_" + _facing_suffix())
 
 func _position_hitbox() -> void:
 	hitbox.position = last_direction * HITBOX_OFFSET
@@ -170,6 +180,8 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		var damage: int = 10 if combo_step == 1 else 18
 		body.take_damage(damage)
+		if body.has_method("is_dead") and body.is_dead:
+			_play_kill_animation()
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area.has_method("get_damage"):
@@ -198,11 +210,9 @@ func take_damage(amount: int) -> void:
 	invincibility_elapsed = 0.0
 	hurtbox.monitoring = false
 
-	anim.play("hurt" + _weapon_suffix())
-
 func _on_animation_finished() -> void:
 	var name := anim.animation
-	if name.begins_with("atk") or name.begins_with("hurt"):
+	if name.begins_with("attack") or name.begins_with("hurt"):
 		if not is_dead:
 			_update_movement_animation(velocity.normalized() if velocity != Vector2.ZERO else Vector2.ZERO)
 

@@ -3,10 +3,6 @@
 [ext_resource type="Script" uid="uid://dg5004sjjcaiu" path="res://scripts/player.gd" id="1_0sssh"]
 [ext_resource type="Texture2D" uid="uid://b4b0tmoa64m0m" path="res://Assets/GMTK_CHARACTER_SPRITESHEET.png" id="2_g2els"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
-atlas = ExtResource("2_g2els")
-region = Rect2(384, 128, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("2_g2els")
 region = Rect2(320, 128, 64, 64)
@@ -190,9 +186,6 @@ region = Rect2(128, 64, 64, 64)
 [sub_resource type="SpriteFrames" id="SpriteFrames_13ly6"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dqkch")
 }, {
@@ -394,40 +387,40 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs3jq"]
-size = Vector2(40, 40)
+size = Vector2(7, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sssh"]
-size = Vector2(28, 54)
+size = Vector2(9.5, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nulb"]
-size = Vector2(46, 45)
+size = Vector2(11.5, 17)
 
 [node name="player" type="CharacterBody2D" unique_id=1623358484]
 script = ExtResource("1_0sssh")
-speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1275553514]
-position = Vector2(-35, 20)
+position = Vector2(57, 22)
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"walk_right"
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1698501449]
-offset_right = 40.0
-offset_bottom = 40.0
+animation = &"walk_front"
+frame_progress = 0.41107765
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=16745951]
-position = Vector2(20, 20)
+position = Vector2(57.5, 25)
 shape = SubResource("RectangleShape2D_gs3jq")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=2141478937]
 
 [node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=553692600]
-position = Vector2(61, 17)
+position = Vector2(68.25, 24)
 shape = SubResource("RectangleShape2D_0sssh")
 debug_color = Color(1, 0, 0.1095183, 0.41960785)
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1192867112]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=299084263]
-position = Vector2(20, 19.5)
+position = Vector2(57.75, 24.5)
 shape = SubResource("RectangleShape2D_6nulb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=813766696]
+position = Vector2(60, 28)
+zoom = Vector2(3.635, 3.635)
