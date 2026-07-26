@@ -51,6 +51,8 @@ func _ready() -> void:
 
 	anim.animation_finished.connect(_on_animation_finished)
 
+	if GameState.chosen_weapon != "none":
+		pick_up_weapon(GameState.chosen_weapon)
 func _physics_process(delta: float) -> void:
 	_update_timers(delta)
 
@@ -235,7 +237,3 @@ func pick_up_weapon(weapon_name: String) -> void:
 			return
 	weapon_changed.emit(current_weapon)
 	print("Picked up: ", weapon_name)
-
-func drop_weapon() -> void:
-	current_weapon = Weapon.NONE
-	weapon_changed.emit(current_weapon)
