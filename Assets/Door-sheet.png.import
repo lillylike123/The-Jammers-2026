@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciohacil4xto7"
-path="res://.godot/imported/room_example2-sheet.png-ed6f87a09551e057e29884aa113a1734.ctex"
+uid="uid://doj8abjdg8hgr"
+path="res://.godot/imported/Door-sheet.png-95163ad08b330fbe75228854f8e5278c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://room_example2-sheet.png"
-dest_files=["res://.godot/imported/room_example2-sheet.png-ed6f87a09551e057e29884aa113a1734.ctex"]
+source_file="res://Door-sheet.png"
+dest_files=["res://.godot/imported/Door-sheet.png-95163ad08b330fbe75228854f8e5278c.ctex"]
 
 [params]
 

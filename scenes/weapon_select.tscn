@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://86ijdos4qb7a" path="res://Assets/button_2.PNG" id="7_8vkjj"]
 [ext_resource type="Texture2D" uid="uid://b4b0tmoa64m0m" path="res://Assets/GMTK_CHARACTER_SPRITESHEET.png" id="8_2aiol"]
 [ext_resource type="Texture2D" uid="uid://dxpmc4mbdk1rq" path="res://Assets/button_red.PNG" id="10_xriy8"]
-[ext_resource type="AudioStream" uid="uid://dufnjbuainupa" path="res://sfx_2.wav" id="11_8vkjj"]
+[ext_resource type="AudioStream" path="res://sfx_2.wav" id="11_8vkjj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smehm"]
 texture = ExtResource("3_j7lel")
