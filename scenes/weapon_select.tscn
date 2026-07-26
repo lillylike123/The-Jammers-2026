@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmumqbkxyg7ov" path="res://scripts/weapon_select.gd" id="1_4qi0g"]
 [ext_resource type="Texture2D" uid="uid://dx0dhp67tvngn" path="res://room_example2.png" id="2_a7qvo"]
-[ext_resource type="FontFile" uid="uid://pp6chplqw1kt" path="res://DungeonFont.ttf" id="2_ija7c"]
+[ext_resource type="FontFile" uid="uid://pp6chplqw1kt" path="res://Assets/DungeonFont.ttf" id="2_ija7c"]
 [ext_resource type="Texture2D" uid="uid://ddtbp0k8xfo66" path="res://the-jammers-2026-main/GMTK_CHARACTER_SPRITESHEET.png" id="3_ija7c"]
 [ext_resource type="Texture2D" uid="uid://cxk18v0eutv57" path="res://Assets/button_4.PNG" id="3_j7lel"]
 [ext_resource type="Texture2D" uid="uid://6mq3w48xnoud" path="res://Assets/button_blue.PNG" id="5_2aiol"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://86ijdos4qb7a" path="res://Assets/button_2.PNG" id="7_8vkjj"]
 [ext_resource type="Texture2D" uid="uid://b4b0tmoa64m0m" path="res://Assets/GMTK_CHARACTER_SPRITESHEET.png" id="8_2aiol"]
 [ext_resource type="Texture2D" uid="uid://dxpmc4mbdk1rq" path="res://Assets/button_red.PNG" id="10_xriy8"]
-[ext_resource type="AudioStream" uid="uid://dufnjbuainupa" path="res://sfx_2.wav" id="11_8vkjj"]
+[ext_resource type="AudioStream" uid="uid://dufnjbuainupa" path="res://Assets/sfx_2.wav" id="11_8vkjj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smehm"]
 texture = ExtResource("3_j7lel")
@@ -528,3 +528,6 @@ text = "Back"
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1779889177]
 stream = ExtResource("11_8vkjj")
 volume_db = 24.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

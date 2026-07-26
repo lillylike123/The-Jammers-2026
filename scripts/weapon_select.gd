@@ -26,3 +26,18 @@ func _check_reset() -> void:
 	await get_tree().process_frame
 	if not sword.is_hovered() and not bow.is_hovered():
 		sprite.play("default")
+		
+		
+		
+
+
+func _on_button_pressed() -> void:
+	GameState.chosen_weapon = "sword"
+	_start_game()
+
+func _start_game() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")
+
+func _on_button_2_pressed() -> void:
+	GameState.chosen_weapon = "bow"
+	_start_game()
