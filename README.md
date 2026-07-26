@@ -1,2 +1,7 @@
 # GMTK-Game-Jam---The-Jammers
-Repo for our game for GMTK game jam, title will be decided!
+# Title
+* This is a 2-D top-down RPG.
+* The story is of a hero who was tending to his ill grandmother. To find a cure for her disease he searched the streets and a mysterious man informs him of a healing tome located deep in a dungeon. The game begins with the hero just defeating the boss and reaching the tome. As soon as he pick it up the cave starts to collapse. The hero has to run out of the room only to be met with a horde of monsters that had respawned. The hero desperately fights his way out but when he reaches the exit statues near the entrance come to life to stop him from stealing the tome. The hero has to fight and defeat this statue to be able to leave the dungeon or die there.
+* We have included two choices of weapons, a bow and a sword. The game consist of three types of rooms 1) Regular dungeons levels, 2) Safe rooms and 3) Boss rooms. The regular rooms are randomized and the game chooses from a set of 6 rooms for the next one (kinda like Hades). There are two Boss rooms which appear at the start and at the end of the game. Safe rooms appear every  3 levels.
+* There is a timer that doesn't show the exact time but a approximate of how much time is left before the cave collapses. If the timer runs out the game ends. The safe rooms are meant to rest and therefore the timer is paused during the time you are in a safe room.
+* There are also chests in certain rooms which allow the player to regenerate HP. There are three types of mobs, 1) Goblins, 2) Slimes and 3)bosses. Certain chest also contain lore in them which reveals the story. Such chest are mostly found in safe rooms.
