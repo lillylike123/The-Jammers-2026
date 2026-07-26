@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://pp6chplqw1kt"
-path="res://.godot/imported/DungeonFont.ttf-c2f092e17d89e934943a69e6ec8f8d66.fontdata"
+path="res://.godot/imported/DungeonFont.ttf-440b15b5d2644a112f7ec3edd0850baa.fontdata"
 
 [deps]
 
-source_file="res://Assets/DungeonFont.ttf"
-dest_files=["res://.godot/imported/DungeonFont.ttf-c2f092e17d89e934943a69e6ec8f8d66.fontdata"]
+source_file="res://DungeonFont.ttf"
+dest_files=["res://.godot/imported/DungeonFont.ttf-440b15b5d2644a112f7ec3edd0850baa.fontdata"]
 
 [params]
 
