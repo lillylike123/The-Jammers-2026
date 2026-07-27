@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dk6i8skx07thv"]
 
-[ext_resource type="Texture2D" uid="uid://bvtky8j7bn8e6" path="res://assets/Blue Slime-export.png" id="1_aabj5"]
+[ext_resource type="Texture2D" uid="uid://bgr2a5u2jn8gq" path="res://assets/Blue Slime-export.png" id="1_aabj5"]
+[ext_resource type="Script" uid="uid://i4i4hx4i8nj6" path="res://scripts/blue_slime_ai.gd" id="1_mejc2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mejc2"]
 atlas = ExtResource("1_aabj5")
@@ -230,6 +231,7 @@ animations = [{
 radius = 3.0
 
 [node name="slime" type="CharacterBody2D" unique_id=516242411]
+script = ExtResource("1_mejc2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383613717]
 sprite_frames = SubResource("SpriteFrames_fbqdi")
