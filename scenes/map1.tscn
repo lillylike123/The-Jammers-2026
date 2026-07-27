@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://rqao5wata7bj"]
 
-[ext_resource type="Texture2D" uid="uid://bbd3xic825jj4" path="res://room_example_gmtk-sheet.png" id="1_cf5bg"]
-[ext_resource type="Texture2D" uid="uid://dgpxrb4fyfv8i" path="res://GMTK_Tileset1-sheet.png" id="2_flm4b"]
-[ext_resource type="Texture2D" uid="uid://doj8abjdg8hgr" path="res://Door-sheet.png" id="3_bwbs4"]
+[ext_resource type="Texture2D" uid="uid://3ye0bur2e07j" path="res://room_example_gmtk-sheet.png" id="1_cf5bg"]
+[ext_resource type="Texture2D" uid="uid://dqgtvmo5oenuj" path="res://GMTK_Tileset1-sheet.png" id="2_flm4b"]
+[ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_bwbs4"]
+[ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_x0ugi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na4y3"]
 texture = ExtResource("1_cf5bg")
@@ -578,3 +579,26 @@ tile_set = SubResource("TileSet_ocnw0")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=39013061]
 tile_map_data = PackedByteArray("AAACAAEAAAApAAAAAAADAAEAAAAqAAAAAAANAAEAAAArAAAAAAAMAAEAAAAqAAAAAAACAAIAAAAsAAAAAAANAAIAAAAuAAAAAAAPAAYAAwABAAAAAAAPAAcAAwADAAAAAAA=")
 tile_set = SubResource("TileSet_lfx41")
+
+[node name="player" parent="." unique_id=496868096 instance=ExtResource("4_x0ugi")]
+position = Vector2(8, 56)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1472998985]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1385763335]
+polygon = PackedVector2Array(0, 79, 32, 78, 31, 128, 111, 128, 113, 143, 1, 143)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1827436270]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=2118368040]
+polygon = PackedVector2Array(111, 46, 96, 46, 96, 76, 95, 79, 50, 79, 49, 111, 143, 112, 143, 96, 164, 95, 198, 95, 219, 95, 240, 95, 255, 94, 256, 47, 222, 48, 194, 50, 188, 51, 183, 53, 174, 56, 162, 58, 151, 58, 136, 58, 136, 55, 121, 51)
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=69331904]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" unique_id=213179043]
+polygon = PackedVector2Array(256, 44, 224, 47, 225, 17, 195, 16, 190, 19, 177, 22, 170, 23, 157, 25, 145, 25, 135, 24, 122, 21, 119, 18, 111, 12, 107, 16, 97, 16, 84, 16, 63, 17, 32, 16, 31, 45, 23, 47, 12, 48, 0, 46, 1, 0, 255, 0)
+
+[node name="Area2D4" type="Area2D" parent="." unique_id=1847467985]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D4" unique_id=1178704892]
+polygon = PackedVector2Array(114, 144, 144, 143, 144, 127, 158, 128, 255, 128, 255, 95, 267, 95, 268, 144, 254, 143, 143, 150)

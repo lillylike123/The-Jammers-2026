@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cocb7xk2pxj3j"]
 
-[ext_resource type="Texture2D" uid="uid://os36pnrecbch" path="res://assets/statue spritesheet.png" id="1_dlmty"]
+[ext_resource type="Texture2D" uid="uid://ckna3wvar2mxc" path="res://assets/statue spritesheet.png" id="1_dlmty"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_neq0i"]
 atlas = ExtResource("1_dlmty")
@@ -194,16 +194,38 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13ly6"]
-size = Vector2(18, 51)
+size = Vector2(18, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78qe6"]
+size = Vector2(22, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rresx"]
+size = Vector2(20, 49)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=805991775]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1252530117]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"dying"
+animation = &"attack"
 autoplay = "idle"
-frame_progress = 0.24677788
+frame = 2
+frame_progress = 0.3414085
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066526120]
-position = Vector2(5, 5.5)
+[node name="Area2D" type="Area2D" parent="." unique_id=2114624454]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1066526120]
+position = Vector2(0, 27.75)
 shape = SubResource("RectangleShape2D_13ly6")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=760694935]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1647423993]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_78qe6")
+debug_color = Color(0.8366235, 0.38757202, 0, 0.41960785)
+
+[node name="hurtbox" type="Area2D" parent="." unique_id=471192632]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=651087050]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_rresx")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7bhd0pf1p1x6"]
 
-[ext_resource type="Texture2D" uid="uid://cs5qdo4jeh6y4" path="res://assets/rat and bat spritesheet calciumtrice.png" id="1_1l88y"]
+[ext_resource type="Texture2D" uid="uid://bs6q6kqu86gho" path="res://assets/rat and bat spritesheet calciumtrice.png" id="1_1l88y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_77a1s"]
 atlas = ExtResource("1_1l88y")
@@ -381,7 +381,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_13ly6"]
-radius = 4.0
+radius = 7.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l88y"]
+size = Vector2(16, 21)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_78qe6"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=16213657]
 
@@ -389,7 +394,22 @@ radius = 4.0
 sprite_frames = SubResource("SpriteFrames_13ly6")
 animation = &"attack"
 autoplay = "idle"
+frame = 6
+frame_progress = 0.9974729
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=603715886]
-position = Vector2(-2, 12)
+position = Vector2(-1, 12)
 shape = SubResource("CircleShape2D_13ly6")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1213005388]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=550794851]
+position = Vector2(-11, 9.5)
+shape = SubResource("RectangleShape2D_1l88y")
+debug_color = Color(0.8366235, 0.38757202, 0, 0.41960785)
+
+[node name="hurtbox" type="Area2D" parent="." unique_id=426384879]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=2004364406]
+position = Vector2(-2, 11)
+shape = SubResource("CircleShape2D_78qe6")

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dsrnv1xxji3jl"]
 
-[ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://GMTK2026_tiles-export-sheet.png" id="1_dkfrg"]
-[ext_resource type="Texture2D" uid="uid://doj8abjdg8hgr" path="res://Door-sheet.png" id="2_5k43a"]
+[ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_dkfrg"]
+[ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="2_5k43a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5k43a"]
 texture = ExtResource("1_dkfrg")
@@ -400,3 +400,8 @@ tile_set = SubResource("TileSet_ocnw0")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1375189335]
 tile_map_data = PackedByteArray("AAAGAAEAAAAxAAAAAAAHAAEAAAAyAAAAAAAIAAEAAAAyAAAAAAAJAAEAAAAyAAAAAAAKAAEAAAAyAAAAAAALAAEAAAAzAAAAAAAOAAQAAAAyAAAAAAACAAMAAAAyAAAAAAABAAMAAAAxAAAAAAANAAQAAAAxAAAAAAABAAQAAAA7AAAAAAA=")
 tile_set = SubResource("TileSet_qgdqa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1594740555]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1660211638]
+polygon = PackedVector2Array(44, 145, 16, 144, 16, 48, 45, 48, 79, 47, 81, 31, 95, 32, 95, 15, 192, 16, 191, 80, 207, 78, 208, 64, 240, 63, 257, 64, 256, 95, 209, 95, 208, 110, 159, 111, 159, 128, 146, 128, 144, 143, 111, 144, 111, 128, 79, 129, 80, 97, 65, 95, 62, 111, 49, 111, 47, 136, 46, 146, 255, 144, 292, 85, 285, 20, 287, -13, 209, -19, 116, -20, 12, -20, -18, -19, -20, 32, -31, 72, -33, 124, -25, 147, 0, 153)

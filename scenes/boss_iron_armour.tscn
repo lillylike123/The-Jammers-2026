@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjobtibovypbu"]
 
-[ext_resource type="Texture2D" uid="uid://cdr8of1b3brrp" path="res://assets/statue spritesheet alt no green.png" id="1_b38j7"]
+[ext_resource type="Texture2D" uid="uid://uv5ljostr43e" path="res://assets/statue spritesheet alt no green.png" id="1_b38j7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_seto6"]
 atlas = ExtResource("1_b38j7")
@@ -196,6 +196,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13ly6"]
 size = Vector2(19, 51)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b38j7"]
+size = Vector2(22, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seto6"]
+size = Vector2(20, 57.5)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2050714270]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=131723857]
@@ -207,3 +213,16 @@ frame_progress = 0.008225719
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1779573641]
 position = Vector2(2.5, 4.5)
 shape = SubResource("RectangleShape2D_13ly6")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=826375642]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1453842343]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_b38j7")
+debug_color = Color(0.8366235, 0.38757202, 0, 0.41960785)
+
+[node name="hurtbox" type="Area2D" parent="." unique_id=1496592065]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1421265604]
+position = Vector2(0, 4.75)
+shape = SubResource("RectangleShape2D_seto6")

@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://ba0xl4xogl2uw"]
 
-[ext_resource type="Texture2D" uid="uid://bbd3xic825jj4" path="res://room_example_gmtk-sheet.png" id="1_5wxai"]
-[ext_resource type="Texture2D" uid="uid://dgpxrb4fyfv8i" path="res://GMTK_Tileset1-sheet.png" id="2_igs0g"]
-[ext_resource type="Texture2D" uid="uid://doj8abjdg8hgr" path="res://Door-sheet.png" id="3_frbht"]
+[ext_resource type="Texture2D" uid="uid://3ye0bur2e07j" path="res://room_example_gmtk-sheet.png" id="1_5wxai"]
+[ext_resource type="Texture2D" uid="uid://dqgtvmo5oenuj" path="res://GMTK_Tileset1-sheet.png" id="2_igs0g"]
+[ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_frbht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcsii"]
 texture = ExtResource("1_5wxai")
@@ -694,3 +694,13 @@ tile_set = SubResource("TileSet_qgdqa")
 [node name="Shadows and plants" type="TileMapLayer" parent="." unique_id=1493956361]
 tile_map_data = PackedByteArray("AAADAAEAAQAIAAAAAAAEAAEAAQAJAAAAAAAJAAUAAQAIAAAAAAAKAAUAAQAJAAAAAAALAAUAAQAKAAAAAAALAAYAAQAcAAAAAAACAAEAAAAKAAAAAAABAAEAAAAJAAAAAAACAAIAAAAoAAAAAAABAAIAAAAXAAAAAAADAAIAAQApAAAAAAAEAAIAAQAqAAAAAAAJAAYAAQAqAAAAAAAKAAYAAQArAAAAAAAOAAcAAQAyAAAAAAAOAAgAAQA8AAAAAAACAAgAAQA9AAAAAAAPAAIAAgABAAAAAAAPAAMAAgADAAAAAAA=")
 tile_set = SubResource("TileSet_ocnw0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=399357026]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1772882813]
+polygon = PackedVector2Array(0, 127, 0, 160, 298, 161, 298, -19, -1, -24, 0, 96, 47, 94, 48, 31, 79, 31, 79, 18, 95, 15, 96, -1, 207, -1, 207, 16, 222, 15, 225, 49, 240, 49, 239, 31, 256, 33, 256, 81, 225, 79, 224, 130, 176, 129, 177, 143, 161, 144, 159, 129, 97, 128, 97, 113, 17, 111, 15, 127)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1052837703]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=1946868895]
+polygon = PackedVector2Array(64, 95, 63, 61, 95, 63, 96, 32, 142, 32, 144, 15, 191, 16, 192, 48, 208, 48, 208, 80, 192, 80, 191, 110, 177, 111, 176, 97, 144, 96, 112, 96, 113, 79, 80, 80, 79, 96)

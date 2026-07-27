@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://jyhs1a1n3gqd"]
 
-[ext_resource type="Texture2D" uid="uid://bbd3xic825jj4" path="res://room_example_gmtk-sheet.png" id="1_ae20f"]
-[ext_resource type="Texture2D" uid="uid://dgpxrb4fyfv8i" path="res://GMTK_Tileset1-sheet.png" id="2_0edqn"]
-[ext_resource type="Texture2D" uid="uid://doj8abjdg8hgr" path="res://Door-sheet.png" id="3_tud23"]
+[ext_resource type="Texture2D" uid="uid://3ye0bur2e07j" path="res://room_example_gmtk-sheet.png" id="1_ae20f"]
+[ext_resource type="Texture2D" uid="uid://dqgtvmo5oenuj" path="res://GMTK_Tileset1-sheet.png" id="2_0edqn"]
+[ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_tud23"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5g0d"]
 texture = ExtResource("1_ae20f")
@@ -578,3 +578,8 @@ tile_set = SubResource("TileSet_ocnw0")
 [node name="Walls and shadows" type="TileMapLayer" parent="." unique_id=682855777]
 tile_map_data = PackedByteArray("AAAPAAMAAAAcAAAAAAANAAIAAAAaAAAAAAAOAAIAAAAbAAAAAAAPAAIAAAAKAAAAAAANAAMAAAAqAAAAAAAOAAMAAAArAAAAAAAPAAQAAQABAAAAAAAPAAUAAQADAAAAAAA=")
 tile_set = SubResource("TileSet_qgdqa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1910930614]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=947253329]
+polygon = PackedVector2Array(-23, 78, 0, 144, 256, 143, 286, 141, 285, 0, -2, -2, -13, 30, 0, 80, 0, 31, 31, 32, 32, 46, 48, 47, 47, 32, 64, 32, 63, 46, 78, 47, 84, 49, 95, 54, 111, 57, 122, 58, 134, 58, 146, 55, 155, 52, 163, 48, 175, 48, 191, 47, 192, 59, 192, 62, 209, 63, 208, 48, 239, 49, 240, 63, 274, 63, 274, 82, 257, 81, 256, 97, 160, 96, 162, 80, 161, 76, 149, 80, 144, 81, 138, 82, 129, 84, 118, 85, 112, 83, 102, 83, 93, 80, 87, 78, 78, 75, 79, 83, 79, 95, 49, 95, 48, 80)
