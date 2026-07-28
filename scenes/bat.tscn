@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://drspksxyw4eyl"]
 
+[ext_resource type="Script" uid="uid://3o7n4pmvnodg" path="res://scenes/bat.gd" id="1_cnldk"]
 [ext_resource type="Texture2D" uid="uid://bs6q6kqu86gho" path="res://Assets/rat and bat spritesheet calciumtrice.png" id="1_uhqni"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cnldk"]
@@ -311,6 +312,7 @@ radius = 7.071068
 [sub_resource type="CircleShape2D" id="CircleShape2D_78qe6"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=771616215]
+script = ExtResource("1_cnldk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281846691]
 sprite_frames = SubResource("SpriteFrames_13ly6")

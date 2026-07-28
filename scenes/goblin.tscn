@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxvt0konpcawr"]
 
-[ext_resource type="Texture2D" uid="uid://cs735077vhpyb" path="res://assets/goblin spritesheet calciumtrice.png" id="1_tjgje"]
+[ext_resource type="Script" uid="uid://byn7yr8v5pba" path="res://scripts/goblin.gd" id="1_4yait"]
+[ext_resource type="Texture2D" uid="uid://cs735077vhpyb" path="res://Assets/goblin spritesheet calciumtrice.png" id="1_tjgje"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4yait"]
 atlas = ExtResource("1_tjgje")
@@ -390,6 +391,7 @@ size = Vector2(6.5, 13)
 size = Vector2(11.5, 20)
 
 [node name="goblin" type="CharacterBody2D" unique_id=883392267]
+script = ExtResource("1_4yait")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=154218210]
 sprite_frames = SubResource("SpriteFrames_13ly6")

@@ -6,7 +6,7 @@ signal died
 
 enum State { MOVE, ATTACK, HURT, DEAD }
 
-@export var speed: float = 130.0
+@export var speed: float = 30.0
 @export var max_health: int = 100
 @export var sword_damage: int = 20
 @export var arrow_scene: PackedScene   = preload("res://scenes/arrow.tscn")
