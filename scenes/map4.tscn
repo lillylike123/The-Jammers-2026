@@ -1,8 +1,13 @@
 [gd_scene format=4 uid="uid://dn1isa06iv2i1"]
 
-[ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://GMTK2026_tiles-export-sheet.png" id="1_7bxkw"]
-[ext_resource type="Texture2D" uid="uid://ciohacil4xto7" path="res://room_example2-sheet.png" id="2_8m8rw"]
-[ext_resource type="Texture2D" uid="uid://doj8abjdg8hgr" path="res://Door-sheet.png" id="3_8m8rw"]
+[ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_7bxkw"]
+[ext_resource type="Texture2D" uid="uid://ciohacil4xto7" path="res://Assets/room_example2-sheet.png" id="2_8m8rw"]
+[ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_8m8rw"]
+[ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="4_3suj6"]
+[ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="5_i4bwb"]
+[ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="6_m6o67"]
+[ext_resource type="PackedScene" uid="uid://7bhd0pf1p1x6" path="res://scenes/rat.tscn" id="7_eefgs"]
+[ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_xng1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjcak"]
 texture = ExtResource("1_7bxkw")
@@ -273,3 +278,53 @@ tile_set = SubResource("TileSet_vclpj")
 [node name="Base Tiles" type="TileMapLayer" parent="." unique_id=245261366]
 tile_map_data = PackedByteArray("AAAAAAQAAQApAAAAAAABAAQAAABAAAAAAAAAAAUAAABKAAAAAAABAAUAAQAyAAAAAAACAAQAAAA+AAAAAAADAAQAAAA+AAAAAAACAAUAAABBAAAAAAACAAYAAABBAAAAAAACAAcAAABBAAAAAAADAAcAAAA+AAAAAAAEAAcAAAA+AAAAAAAEAAYAAABBAAAAAAAFAAYAAAA/AAAAAAAGAAYAAABAAAAAAAAFAAcAAABKAAAAAAAGAAcAAQAyAAAAAAAHAAcAAAA+AAAAAAAIAAcAAABBAAAAAAAIAAgAAABBAAAAAAAMAAgAAABBAAAAAAANAAgAAgACAAAAAAANAAcAAAA+AAAAAAACAAMAAABBAAAAAAABAAMAAABBAAAAAAABAAIAAQAOAAAAAAACAAIAAQAPAAAAAAADAAMAAAA2AAAAAAAEAAMAAAA3AAAAAAADAAIAAQAQAAAAAAAEAAIAAAApAAAAAAAFAAMAAQAfAAAAAAAFAAIAAQASAAAAAAANAAYAAQA6AAAAAAAOAAYAAQA7AAAAAAANAAUAAQA1AAAAAAAOAAUAAQA2AAAAAAAPAAYAAQA8AAAAAAAMAAUAAABBAAAAAAAMAAQAAABBAAAAAAALAAIAAQAYAAAAAAAMAAIAAQAZAAAAAAALAAMAAQAlAAAAAAAMAAMAAAA5AAAAAAAMAAEAAABBAAAAAAANAAEAAAA+AAAAAAAOAAEAAAA+AAAAAAABAAEAAQAGAAAAAAADAAEAAQAIAAAAAAAGAAIAAQATAAAAAAAHAAIAAQAUAAAAAAAIAAIAAQAVAAAAAAAJAAIAAQAWAAAAAAAKAAIAAQAXAAAAAAAGAAMAAQAgAAAAAAAHAAMAAQAhAAAAAAAIAAMAAQAiAAAAAAAJAAMAAQAjAAAAAAAKAAMAAQAkAAAAAAAGAAEAAQAKAAAAAAAHAAEAAQAKAAAAAAAIAAEAAQAKAAAAAAAJAAEAAQAKAAAAAAAKAAEAAQAKAAAAAAALAAEAAQALAAAAAAAFAAEAAQAJAAAAAAAGAAQAAQAtAAAAAAAHAAQAAQAtAAAAAAAIAAQAAQAtAAAAAAAJAAQAAQAtAAAAAAAKAAQAAQAtAAAAAAALAAQAAQAuAAAAAAAFAAQAAQAsAAAAAAAEAAQAAQArAAAAAAAHAAgAAABPAAAAAAAGAAgAAABOAAAAAAAFAAgAAABOAAAAAAAEAAgAAABOAAAAAAADAAgAAABMAAAAAAACAAgAAABJAAAAAAAMAAYAAABJAAAAAAAOAAcAAABJAAAAAAAPAAcAAABMAAAAAAAOAAIAAABMAAAAAAANAAIAAABOAAAAAAABAAYAAABPAAAAAAAAAAYAAABOAAAAAAADAAUAAABOAAAAAAACAAEAAQAHAAAAAAABAAAAAQACAAAAAAADAAAAAQACAAAAAAACAAAAAQADAAAAAAAOAAQAAQAvAAAAAAANAAQAAQAvAAAAAAAPAAQAAQAwAAAAAAAPAAUAAQA3AAAAAAAPAAMAAQAoAAAAAAAOAAMAAQAnAAAAAAANAAMAAQAnAAAAAAA=")
 tile_set = SubResource("TileSet_3nfwx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1966956767]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2135532971]
+polygon = PackedVector2Array(1, 63, 15, 64, 16, 15, 31, 16, 31, 30, 47, 31, 48, 14, 63, 16, 64, 31, 192, 32, 191, 16, 239, 16, 240, 31, 208, 31, 208, 79, 239, 80, 239, 94, 257, 96, 256, 112, 223, 111, 223, 126, 222, 144, 193, 143, 191, 127, 208, 128, 208, 97, 192, 95, 192, 63, 177, 63, 179, 54, 93, 53, 92, 62, 63, 64, 63, 78, 48, 79, 48, 111, 63, 112, 63, 95, 111, 95, 112, 111, 143, 112, 144, 144, 126, 144, 128, 126, 32, 127, 31, 95, 0, 95, -1, 95, 1, 64, -29, 61, -29, 102, -29, 139, -30, 156, 282, 158, 277, -8, 20, -20, -26, -18, -24, 53)
+
+[node name="CharacterBody2D" parent="." unique_id=771616215 instance=ExtResource("4_3suj6")]
+position = Vector2(124, 120)
+
+[node name="slime" parent="." unique_id=516242411 instance=ExtResource("5_i4bwb")]
+position = Vector2(10, 79)
+
+[node name="goblin" parent="." unique_id=883392267 instance=ExtResource("6_m6o67")]
+position = Vector2(37, 87)
+
+[node name="goblin2" parent="." unique_id=1852087890 instance=ExtResource("6_m6o67")]
+position = Vector2(165, 33)
+
+[node name="CharacterBody2D2" parent="." unique_id=16213657 instance=ExtResource("7_eefgs")]
+position = Vector2(120, 35)
+
+[node name="CharacterBody2D3" parent="." unique_id=596239309 instance=ExtResource("7_eefgs")]
+position = Vector2(230, 83)
+
+[node name="goblin3" parent="." unique_id=81020308 instance=ExtResource("6_m6o67")]
+position = Vector2(199, 77)
+
+[node name="goblin4" parent="." unique_id=1954962456 instance=ExtResource("6_m6o67")]
+position = Vector2(232, 11)
+
+[node name="slime2" parent="." unique_id=1755264486 instance=ExtResource("5_i4bwb")]
+position = Vector2(29, 48)
+
+[node name="slime3" parent="." unique_id=1067268734 instance=ExtResource("5_i4bwb")]
+position = Vector2(75, 113)
+
+[node name="CharacterBody2D4" parent="." unique_id=261689147 instance=ExtResource("4_3suj6")]
+position = Vector2(115, 91)
+
+[node name="CharacterBody2D5" parent="." unique_id=566759080 instance=ExtResource("7_eefgs")]
+position = Vector2(33, 59)
+
+[node name="CharacterBody2D6" parent="." unique_id=458105755 instance=ExtResource("7_eefgs")]
+position = Vector2(49, 108)
+
+[node name="player" parent="." unique_id=496868096 instance=ExtResource("8_xng1r")]
+position = Vector2(89, 106)
+
+[node name="CharacterBody2D7" parent="." unique_id=1440004376 instance=ExtResource("7_eefgs")]
+position = Vector2(69, 38)

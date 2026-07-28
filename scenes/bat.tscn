@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drspksxyw4eyl"]
 
-[ext_resource type="Texture2D" uid="uid://bs6q6kqu86gho" path="res://assets/rat and bat spritesheet calciumtrice.png" id="1_uhqni"]
+[ext_resource type="Texture2D" uid="uid://bs6q6kqu86gho" path="res://Assets/rat and bat spritesheet calciumtrice.png" id="1_uhqni"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cnldk"]
 atlas = ExtResource("1_uhqni")
@@ -314,15 +314,18 @@ radius = 7.071068
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281846691]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"idle"
+animation = &"backflip"
 autoplay = "idle"
-frame_progress = 0.8664948
+frame = 9
+frame_progress = 0.731453
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833169792]
+visible = false
 position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_13ly6")
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1582894100]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1811609502]
 position = Vector2(1, 0)

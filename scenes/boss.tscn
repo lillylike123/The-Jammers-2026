@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cocb7xk2pxj3j"]
 
-[ext_resource type="Texture2D" uid="uid://ckna3wvar2mxc" path="res://assets/statue spritesheet.png" id="1_dlmty"]
+[ext_resource type="Texture2D" uid="uid://ckna3wvar2mxc" path="res://Assets/statue spritesheet.png" id="1_dlmty"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_neq0i"]
 atlas = ExtResource("1_dlmty")
@@ -206,14 +206,10 @@ size = Vector2(20, 49)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1252530117]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.3414085
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2114624454]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1066526120]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066526120]
 position = Vector2(0, 27.75)
 shape = SubResource("RectangleShape2D_13ly6")
 

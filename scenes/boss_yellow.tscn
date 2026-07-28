@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j48p7n5a00kr"]
 
-[ext_resource type="Texture2D" uid="uid://b2p7a2xvmto5e" path="res://assets/statue spritesheet no green.png" id="1_mypsi"]
+[ext_resource type="Texture2D" uid="uid://b2p7a2xvmto5e" path="res://Assets/statue spritesheet no green.png" id="1_mypsi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4gw0f"]
 atlas = ExtResource("1_mypsi")
@@ -206,8 +206,9 @@ size = Vector2(20, 49)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=211446193]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"dying"
+animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.61223364
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1943718238]
 position = Vector2(2, 4)
