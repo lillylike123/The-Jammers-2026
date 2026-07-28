@@ -718,7 +718,7 @@ animation = &"sword_attack_right"
 [node name="Hitbox" type="Area2D" parent="." unique_id=1706544597]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1554899029]
-position = Vector2(14, 5)
+position = Vector2(15, 5)
 shape = SubResource("RectangleShape2D_vi8qj")
 debug_color = Color(0.8096832, 0.41290253, 0, 0.41960785)
 
