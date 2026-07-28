@@ -362,7 +362,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"bow_attack_down",
 "speed": 5.0
 }, {
@@ -379,7 +379,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ur7pv")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"bow_attack_left",
 "speed": 5.0
 }, {
@@ -396,7 +396,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jej6c")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"bow_attack_right",
 "speed": 5.0
 }, {
@@ -413,7 +413,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qfm1y")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"bow_attack_up",
 "speed": 5.0
 }, {
@@ -439,7 +439,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l71n6")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"sword_attack_down",
 "speed": 5.0
 }, {
@@ -459,7 +459,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dt7fs")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"sword_attack_left",
 "speed": 5.0
 }, {
@@ -479,7 +479,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_md1ol")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"sword_attack_right",
 "speed": 5.0
 }, {
@@ -499,7 +499,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j2b1d")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"sword_attack_up",
 "speed": 5.0
 }, {
@@ -516,7 +516,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fdfoy")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_down",
 "speed": 5.0
 }, {
@@ -533,7 +533,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mx1m4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_down_bow",
 "speed": 5.0
 }, {
@@ -550,7 +550,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2gdjj")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_down_sword",
 "speed": 5.0
 }, {
@@ -573,7 +573,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8svfe")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_left_bow",
 "speed": 5.0
 }, {
@@ -596,7 +596,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ua5cf")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_left_sword",
 "speed": 5.0
 }, {
@@ -619,7 +619,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_770dr")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_right_bow",
 "speed": 5.0
 }, {
@@ -642,7 +642,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mwp2n")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_right_sword",
 "speed": 5.0
 }, {
@@ -676,7 +676,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bpsgo")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_up_bow",
 "speed": 5.0
 }, {
@@ -693,13 +693,10 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ry8ed")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_up_sword",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nfwx"]
-size = Vector2(7, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vi8qj"]
 size = Vector2(9, 14)
@@ -707,28 +704,31 @@ size = Vector2(9, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qthv"]
 size = Vector2(10, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nfwx"]
+size = Vector2(7, 12)
+
 [node name="player" type="CharacterBody2D" unique_id=496868096]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1524512008]
-position = Vector2(4, 1)
+position = Vector2(5, 1)
 sprite_frames = SubResource("SpriteFrames_3nfwx")
-animation = &"bow_attack_right"
-frame_progress = 0.99070805
+animation = &"sword_attack_right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1751387027]
-position = Vector2(4.5, 5)
-shape = SubResource("RectangleShape2D_3nfwx")
+[node name="Hitbox" type="Area2D" parent="." unique_id=1706544597]
 
-[node name="hitbx" type="Area2D" parent="." unique_id=1706544597]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbx" unique_id=1554899029]
-position = Vector2(13, 5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1554899029]
+position = Vector2(14, 5)
 shape = SubResource("RectangleShape2D_vi8qj")
 debug_color = Color(0.8096832, 0.41290253, 0, 0.41960785)
 
-[node name="hurtbox" type="Area2D" parent="." unique_id=1199755038]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1199755038]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="hurtbox" unique_id=1028197561]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox" unique_id=1028197561]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_2qthv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1751387027]
+visible = false
+position = Vector2(4.5, 5)
+shape = SubResource("RectangleShape2D_3nfwx")

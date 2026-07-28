@@ -3,70 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bgr2a5u2jn8gq" path="res://Assets/Blue Slime-export.png" id="1_aabj5"]
 [ext_resource type="Script" uid="uid://i4i4hx4i8nj6" path="res://scripts/blue_slime_ai.gd" id="1_mejc2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mejc2"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uklly"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fqqxv"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3yo3q"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(48, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b4p3y"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(0, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aabj5"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(16, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j6u3f"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(32, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cdn1d"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(48, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_48o0l"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(64, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0fdxm"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(80, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7pup8"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(96, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ikrs"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(112, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b66u8"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(128, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yhxsf"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(144, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dflca"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(160, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g6c1a"]
-atlas = ExtResource("1_aabj5")
-region = Rect2(176, 48, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_japoy"]
 atlas = ExtResource("1_aabj5")
 region = Rect2(0, 16, 16, 16)
@@ -119,69 +55,6 @@ region = Rect2(176, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mejc2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uklly")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fqqxv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3yo3q")
-}],
-"loop": 1,
-"name": &"back_idle",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b4p3y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aabj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j6u3f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cdn1d")
-}],
-"loop": 1,
-"name": &"front_idle",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_48o0l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0fdxm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7pup8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1ikrs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b66u8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yhxsf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dflca")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g6c1a")
-}],
-"loop": 1,
-"name": &"front_jump",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_japoy")
 }, {
 "duration": 1.0,
@@ -194,7 +67,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_tnxar")
 }],
 "loop": 1,
-"name": &"idle",
+"name": &"right_idle",
 "speed": 7.0
 }, {
 "frames": [{
@@ -238,9 +111,8 @@ script = ExtResource("1_mejc2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383613717]
 sprite_frames = SubResource("SpriteFrames_fbqdi")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.009908385
+animation = &"right_idle"
+autoplay = "right_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1239313948]
 position = Vector2(0, 4)
