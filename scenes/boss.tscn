@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cocb7xk2pxj3j"]
 
 [ext_resource type="Texture2D" uid="uid://ckna3wvar2mxc" path="res://Assets/statue spritesheet.png" id="1_dlmty"]
+[ext_resource type="Script" uid="uid://c1xvkj37a707i" path="res://scripts/boss.gd" id="1_neq0i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_neq0i"]
 atlas = ExtResource("1_dlmty")
@@ -116,7 +117,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wqpjq")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
 "speed": 6.0
 }, {
@@ -139,7 +140,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lfs1x")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dying",
 "speed": 6.0
 }, {
@@ -147,7 +148,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8eiau")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -188,7 +189,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p3gxo")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk",
 "speed": 7.0
 }]
@@ -203,6 +204,7 @@ size = Vector2(22, 26)
 size = Vector2(20, 49)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=805991775]
+script = ExtResource("1_neq0i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1252530117]
 sprite_frames = SubResource("SpriteFrames_13ly6")
