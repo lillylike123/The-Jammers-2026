@@ -2,10 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_dkfrg"]
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="2_5k43a"]
-[ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="3_xkdms"]
-[ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="4_o0bkn"]
 [ext_resource type="PackedScene" uid="uid://7bhd0pf1p1x6" path="res://scenes/rat.tscn" id="5_ai184"]
 [ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="6_7g08o"]
+[ext_resource type="PackedScene" uid="uid://bqfi4w85w58ff" path="res://scenes/timer.tscn" id="6_wulgb"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="7_w8t5o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5k43a"]
@@ -411,30 +410,6 @@ tile_set = SubResource("TileSet_qgdqa")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1660211638]
 polygon = PackedVector2Array(44, 145, 16, 144, 16, 48, 45, 48, 79, 47, 81, 31, 95, 32, 95, 15, 192, 16, 191, 80, 207, 78, 208, 64, 240, 63, 257, 64, 256, 95, 209, 95, 208, 110, 159, 111, 159, 128, 146, 128, 144, 143, 111, 144, 111, 128, 79, 129, 80, 97, 65, 95, 62, 111, 49, 111, 47, 136, 46, 146, 255, 144, 292, 85, 285, 20, 287, -13, 209, -19, 116, -20, 12, -20, -18, -19, -20, 32, -31, 72, -33, 124, -25, 147, 0, 153)
 
-[node name="slime" parent="." unique_id=516242411 instance=ExtResource("3_xkdms")]
-position = Vector2(40, 75)
-
-[node name="slime2" parent="." unique_id=1676924857 instance=ExtResource("3_xkdms")]
-position = Vector2(118, 114)
-
-[node name="slime3" parent="." unique_id=2095998613 instance=ExtResource("3_xkdms")]
-position = Vector2(71, 52)
-
-[node name="slime4" parent="." unique_id=561614741 instance=ExtResource("3_xkdms")]
-position = Vector2(187, 93)
-
-[node name="goblin" parent="." unique_id=883392267 instance=ExtResource("4_o0bkn")]
-position = Vector2(142, 68)
-
-[node name="goblin2" parent="." unique_id=1787896416 instance=ExtResource("4_o0bkn")]
-position = Vector2(97, 91)
-
-[node name="goblin3" parent="." unique_id=312770071 instance=ExtResource("4_o0bkn")]
-position = Vector2(145, 23)
-
-[node name="goblin4" parent="." unique_id=261600977 instance=ExtResource("4_o0bkn")]
-position = Vector2(223, 74)
-
 [node name="CharacterBody2D" parent="." unique_id=16213657 instance=ExtResource("5_ai184")]
 position = Vector2(82, 65)
 
@@ -454,10 +429,13 @@ position = Vector2(151, 50)
 position = Vector2(30, 56)
 
 [node name="CharacterBody2D7" parent="." unique_id=1425481863 instance=ExtResource("6_7g08o")]
-position = Vector2(113, 78)
+position = Vector2(117, 79)
 
 [node name="CharacterBody2D8" parent="." unique_id=1824452150 instance=ExtResource("6_7g08o")]
 position = Vector2(29, 96)
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("7_w8t5o")]
 position = Vector2(27, 130)
+
+[node name="Timer" parent="." unique_id=20635280 instance=ExtResource("6_wulgb")]
+position = Vector2(246, 10)

@@ -151,6 +151,7 @@ animations = [{
 [node name="Timer" type="Node2D" unique_id=20635280]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1932039882]
+scale = Vector2(0.375, 0.375)
 sprite_frames = SubResource("SpriteFrames_3nfwx")
-animation = &"0%_remaining"
-frame_progress = 0.7569453
+animation = &"5%_remaining"
+frame_progress = 0.34492773

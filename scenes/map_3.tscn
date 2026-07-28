@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="6_iqnx3"]
 [ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="7_xn387"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_an2rc"]
+[ext_resource type="PackedScene" uid="uid://bqfi4w85w58ff" path="res://scenes/timer.tscn" id="9_fwffn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5g0d"]
 texture = ExtResource("1_ae20f")
@@ -624,3 +625,6 @@ position = Vector2(19, 88)
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("8_an2rc")]
 position = Vector2(28, 56)
+
+[node name="Timer" parent="." unique_id=20635280 instance=ExtResource("9_fwffn")]
+position = Vector2(241, 13)

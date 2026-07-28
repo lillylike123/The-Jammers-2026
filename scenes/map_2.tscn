@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="6_kocsa"]
 [ext_resource type="PackedScene" uid="uid://7bhd0pf1p1x6" path="res://scenes/rat.tscn" id="7_0a3ge"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_5w0ad"]
+[ext_resource type="PackedScene" uid="uid://bqfi4w85w58ff" path="res://scenes/timer.tscn" id="9_kocsa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcsii"]
 texture = ExtResource("1_5wxai")
@@ -751,3 +752,6 @@ position = Vector2(41, 98)
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("8_5w0ad")]
 position = Vector2(2, 105)
+
+[node name="Timer" parent="player" unique_id=20635280 instance=ExtResource("9_kocsa")]
+position = Vector2(241, -93)

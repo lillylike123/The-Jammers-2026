@@ -320,12 +320,10 @@ frame = 9
 frame_progress = 0.731453
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1833169792]
-visible = false
 position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_13ly6")
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1582894100]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1811609502]
 position = Vector2(1, 0)
