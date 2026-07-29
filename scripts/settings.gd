@@ -9,6 +9,7 @@ extends Node2D
 var bus_index: int = 0
 
 func _ready() -> void:
+	Music.play_music(Music.MENU)
 	bus_index = AudioServer.get_bus_index(bus_name)
 	var M_current_db: float = AudioServer.get_bus_volume_db(bus_index)
 	M_slider.value = db_to_linear(M_current_db)

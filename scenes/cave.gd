@@ -4,6 +4,7 @@ extends Node2D
 @onready var exit_door = $Door 
 
 func _ready() -> void:
+	Music.play_music(Music.BOSS)
 	if boss and boss.has_signal("died"):
 		boss.died.connect(_on_boss_defeated)
 	else:

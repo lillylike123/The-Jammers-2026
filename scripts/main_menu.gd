@@ -3,6 +3,7 @@ extends Node2D
 @onready var Settings: Button = $Button2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Music.play_music(Music.MENU)
 	start.pressed.connect(move_to_weapon_select)
 	Settings.pressed.connect(move_to_settings)
 
