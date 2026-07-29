@@ -32,12 +32,14 @@ func _physics_process(_delta: float) -> void:
 		# FIRM OVERLAP FORCE: If very close, force a minimum movement speed 
 		# toward the player so the physics engine registers the Area2D collision!
 		if distance < 16.0:
-			velocity = direction * max(move_speed * 1.5, 35.0) 
+			velocity = direction * move_speed#max(move_speed * 1.5, 35.0) 
 		else:
 			velocity = direction * move_speed
 			
 		if animated_sprite and animated_sprite.animation != "walk":
 			animated_sprite.play("skipping around")
+		else:
+			animated_sprite.play("angry?")
 		
 		if to_player.x != 0:
 			animated_sprite.flip_h = to_player.x < 0
@@ -83,15 +85,11 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.has_method("take_damage"):
 		area.take_damage(contact_damage)
 
-		if $AnimatedSprite2D.animation == "skipping around":
-			$AnimatedSprite2D.play("angry?")
-
+		
 	elif area.get_parent() and area.get_parent().has_method("take_damage"):
 		area.get_parent().take_damage(contact_damage)
 
-		if $AnimatedSprite2D.animation == "skipping around":
-			$AnimatedSprite2D.play("angry?")
-
+		
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	# If the goblin is already dead, ignore any extra hits
 	if is_dead:
