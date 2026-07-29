@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_x0ugi"]
 [ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="6_raiux"]
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="7_5vo6v"]
+[ext_resource type="Script" uid="uid://xd8wwkxfiydg" path="res://scenes/door.gd" id="7_p7jwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na4y3"]
 texture = ExtResource("1_cf5bg")
@@ -564,6 +565,9 @@ texture = ExtResource("3_bwbs4")
 sources/0 = SubResource("TileSetAtlasSource_57qb2")
 sources/3 = SubResource("TileSetAtlasSource_vl4cn")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nfwx"]
+size = Vector2(17, 32)
+
 [node name="Map1" type="Node2D" unique_id=298472527]
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=1484497655]
@@ -607,3 +611,10 @@ position = Vector2(125, 122)
 
 [node name="slime3" parent="." unique_id=1692212202 instance=ExtResource("6_raiux")]
 position = Vector2(210, 27)
+
+[node name="Door" type="Area2D" parent="." unique_id=1162747823]
+script = ExtResource("7_p7jwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=370984377]
+position = Vector2(247.5, 112)
+shape = SubResource("RectangleShape2D_3nfwx")

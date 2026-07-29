@@ -31,7 +31,6 @@ func _on_player_hurt(current_health: int, max_health: int) -> void:
 func _on_player_died() -> void:
 	player_died.emit()
 
-# FIXED: Changed argument name from 'weapon' to 'weapon_type' to fix enum conflicts
 func set_weapon(weapon_type: Weapon) -> void:
 	if selected_weapon == weapon_type:
 		return

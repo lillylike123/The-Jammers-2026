@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://ciy8ab0n40u7u"
+Roommanger="*uid://6s87magd1cm2"
 
 [display]
 
