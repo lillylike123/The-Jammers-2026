@@ -388,17 +388,15 @@ radius = 5.5226803
 radius = 13.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tuyoq"]
-radius = 14.0
+radius = 8.5440035
 
 [node name="goblin" type="CharacterBody2D" unique_id=883392267]
 script = ExtResource("1_4yait")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=154218210]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"angry?"
+animation = &"skipping around"
 autoplay = "idle"
-frame = 6
-frame_progress = 0.9883651
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=714704282]
 position = Vector2(1.5, 10.5)

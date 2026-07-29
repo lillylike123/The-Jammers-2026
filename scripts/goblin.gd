@@ -75,22 +75,22 @@ func _die() -> void:
 	# Otherwise, we just remove it from the map immediately:
 	queue_free()
 
-
-func _on_hitbox_area_entered(area: Area2D) -> void:
 	
-	# Ignore if the goblin is already dead
+func _on_hitbox_area_entered(area: Area2D) -> void:
 	if is_dead:
 		return
-		
-	# 1. Check if we hit the player's hurtbox directly
+
 	if area.has_method("take_damage"):
 		area.take_damage(contact_damage)
-		
-	# 2. Check if the parent node is the player (fallback protection)
+
+		if $AnimatedSprite2D.animation == "skipping around":
+			$AnimatedSprite2D.play("angry?")
+
 	elif area.get_parent() and area.get_parent().has_method("take_damage"):
 		area.get_parent().take_damage(contact_damage)
 
-
+		if $AnimatedSprite2D.animation == "skipping around":
+			$AnimatedSprite2D.play("angry?")
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	# If the goblin is already dead, ignore any extra hits
