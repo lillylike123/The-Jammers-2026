@@ -306,7 +306,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f55f5")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dying",
 "speed": 5.0
 }, {
@@ -392,11 +392,13 @@ radius = 8.5440035
 
 [node name="goblin" type="CharacterBody2D" unique_id=883392267]
 script = ExtResource("1_4yait")
-health = 75
+speed = 20.0
+max_health = 50
+contact_damage = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=154218210]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"skipping around"
+animation = &"dying"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=714704282]
