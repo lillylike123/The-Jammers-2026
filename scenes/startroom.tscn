@@ -2,9 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_ima13"]
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="2_81fqo"]
+[ext_resource type="PackedScene" uid="uid://5oikbjtgf0p7" path="res://scenes/minotaur.tscn" id="4_66qk8"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_yviva"]
-[ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="5_p0spv"]
-[ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="6_fkdn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_exvue"]
 texture = ExtResource("1_ima13")
@@ -133,10 +132,7 @@ tile_set = SubResource("TileSet_vclpj")
 polygon = PackedVector2Array(-32, -8, -32, 168, 272, 168, 280, -24, 0, -40, 0, 0, -3, 32, 256, 32, 256, 136, 256, 144, 0, 144, -1, -2, -24, 32, -24, 144)
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("4_yviva")]
-position = Vector2(95, 115)
+position = Vector2(11, 56)
 
-[node name="slime" parent="." unique_id=516242411 instance=ExtResource("5_p0spv")]
-position = Vector2(39, 99)
-
-[node name="CharacterBody2D2" parent="." unique_id=771616215 instance=ExtResource("6_fkdn2")]
-position = Vector2(44, 58)
+[node name="CharacterBody2D" parent="." unique_id=1949039495 instance=ExtResource("4_66qk8")]
+position = Vector2(124, 75)

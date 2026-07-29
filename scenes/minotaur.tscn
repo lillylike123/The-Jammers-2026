@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5oikbjtgf0p7"]
 
 [ext_resource type="Texture2D" uid="uid://5x2juwcit0sj" path="res://Assets/minotaur spritesheet calciumtrice-sheet.png" id="1_em423"]
+[ext_resource type="Script" uid="uid://vc51xgbwavi2" path="res://scenes/minotaur.gd" id="1_umvy0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umvy0"]
 atlas = ExtResource("1_em423")
@@ -270,7 +271,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3oxb3")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dying",
 "speed": 7.0
 }, {
@@ -380,36 +381,43 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_13ly6"]
-size = Vector2(26, 29)
+[sub_resource type="CircleShape2D" id="CircleShape2D_cnldk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_em423"]
-size = Vector2(22, 26)
+[sub_resource type="CircleShape2D" id="CircleShape2D_48wkk"]
+radius = 28.01785
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_umvy0"]
-size = Vector2(24, 32)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ss3tx"]
+radius = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1949039495]
+collision_layer = 0
+script = ExtResource("1_umvy0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=462064340]
 sprite_frames = SubResource("SpriteFrames_13ly6")
-animation = &"swing"
+animation = &"dying"
 autoplay = "idle"
-frame_progress = 0.26386178
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1409633588]
 position = Vector2(2, 10)
-shape = SubResource("RectangleShape2D_13ly6")
+shape = SubResource("CircleShape2D_cnldk")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=470533180]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1108195688]
-position = Vector2(-22, 11)
-shape = SubResource("RectangleShape2D_em423")
+position = Vector2(3, 8)
+shape = SubResource("CircleShape2D_48wkk")
 debug_color = Color(0.8366235, 0.38757202, 0, 0.41960785)
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1605913200]
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=32134675]
-position = Vector2(4, 8)
-shape = SubResource("RectangleShape2D_umvy0")
+position = Vector2(3, 9)
+shape = SubResource("CircleShape2D_ss3tx")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
