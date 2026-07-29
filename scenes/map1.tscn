@@ -4,11 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dqgtvmo5oenuj" path="res://GMTK_Tileset1-sheet.png" id="2_flm4b"]
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_bwbs4"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_x0ugi"]
-[ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="5_2m3eu"]
 [ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="6_raiux"]
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="7_5vo6v"]
-[ext_resource type="PackedScene" uid="uid://7bhd0pf1p1x6" path="res://scenes/rat.tscn" id="8_k348l"]
-[ext_resource type="PackedScene" uid="uid://bqfi4w85w58ff" path="res://scenes/timer.tscn" id="9_raiux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na4y3"]
 texture = ExtResource("1_cf5bg")
@@ -585,61 +582,28 @@ tile_set = SubResource("TileSet_ocnw0")
 tile_map_data = PackedByteArray("AAACAAEAAAApAAAAAAADAAEAAAAqAAAAAAANAAEAAAArAAAAAAAMAAEAAAAqAAAAAAACAAIAAAAsAAAAAAANAAIAAAAuAAAAAAAPAAYAAwABAAAAAAAPAAcAAwADAAAAAAA=")
 tile_set = SubResource("TileSet_lfx41")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1472998985]
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=1547699769]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1385763335]
-polygon = PackedVector2Array(0, 79, 32, 78, 31, 128, 111, 128, 113, 143, 1, 143)
-
-[node name="Area2D2" type="Area2D" parent="." unique_id=1827436270]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=2118368040]
-polygon = PackedVector2Array(111, 46, 96, 46, 96, 76, 95, 79, 50, 79, 49, 111, 143, 112, 143, 96, 164, 95, 198, 95, 219, 95, 240, 95, 255, 94, 256, 47, 222, 48, 194, 50, 188, 51, 183, 53, 174, 56, 162, 58, 151, 58, 136, 58, 136, 55, 121, 51)
-
-[node name="Area2D3" type="Area2D" parent="." unique_id=69331904]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" unique_id=213179043]
-polygon = PackedVector2Array(256, 44, 224, 47, 225, 17, 195, 16, 190, 19, 177, 22, 170, 23, 157, 25, 145, 25, 135, 24, 122, 21, 119, 18, 111, 12, 107, 16, 97, 16, 84, 16, 63, 17, 32, 16, 31, 45, 23, 47, 12, 48, 0, 46, 1, 0, 255, 0)
-
-[node name="Area2D4" type="Area2D" parent="." unique_id=1847467985]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D4" unique_id=1178704892]
-polygon = PackedVector2Array(114, 144, 144, 143, 144, 127, 158, 128, 255, 128, 255, 95, 267, 95, 268, 144, 254, 143, 143, 150)
-
-[node name="CharacterBody2D" parent="." unique_id=771616215 instance=ExtResource("5_2m3eu")]
-position = Vector2(39, 85)
-
-[node name="slime" parent="." unique_id=516242411 instance=ExtResource("6_raiux")]
-position = Vector2(42, 115)
-
-[node name="slime2" parent="." unique_id=1256071784 instance=ExtResource("6_raiux")]
-position = Vector2(50, 26)
-
-[node name="slime3" parent="." unique_id=461882283 instance=ExtResource("6_raiux")]
-position = Vector2(153, 114)
-
-[node name="goblin" parent="." unique_id=883392267 instance=ExtResource("7_5vo6v")]
-position = Vector2(126, 112)
-
-[node name="goblin2" parent="." unique_id=634202004 instance=ExtResource("7_5vo6v")]
-position = Vector2(149, 26)
-
-[node name="goblin3" parent="." unique_id=1971347950 instance=ExtResource("7_5vo6v")]
-position = Vector2(208, 19)
-
-[node name="CharacterBody2D2" parent="." unique_id=16213657 instance=ExtResource("8_k348l")]
-position = Vector2(69, 49)
-
-[node name="CharacterBody2D3" parent="." unique_id=13067039 instance=ExtResource("8_k348l")]
-position = Vector2(209, 103)
-
-[node name="CharacterBody2D4" parent="." unique_id=476710196 instance=ExtResource("5_2m3eu")]
-position = Vector2(138, 67)
-
-[node name="CharacterBody2D5" parent="." unique_id=667878461 instance=ExtResource("5_2m3eu")]
-position = Vector2(235, 110)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1174221933]
+polygon = PackedVector2Array(1, 0, 26, 0, 26, 38, 0, 38, 0, -5, -4, 7, -5, 39, -2, 46, 0, 48, 32, 48, 32, 16, 64, 16, 101, 16, 102, 21, 118, 24, 146, 30, 175, 28, 192, 22, 204, 21, 205, 16, 230, 16, 230, 48, 204, 48, 205, 44, 205, 38, 175, 50, 147, 52, 123, 46, 103, 38, 101, 38, 101, 48, 96, 48, 96, 80, 48, 80, 48, 112, 144, 112, 144, 96, 256, 96, 256, 128, 144, 128, 144, 144, 112, 144, 112, 128, 32, 128, 32, 80, 0, 80, -14, 80, -13, 48, -60, 164, -1, 207, 71, 212, 173, 221, 274, 219, 347, 199, 360, 168, 372, 121, 377, 40, 357, -15, 310, -60, 215, -67, 149, -68, 82, -63, 26, -19)
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("4_x0ugi")]
 position = Vector2(10, 54)
 
-[node name="Timer" parent="." unique_id=20635280 instance=ExtResource("9_raiux")]
-position = Vector2(242, 11)
+[node name="goblin" parent="." unique_id=883392267 instance=ExtResource("7_5vo6v")]
+position = Vector2(120, 21)
+
+[node name="goblin2" parent="." unique_id=478521691 instance=ExtResource("7_5vo6v")]
+position = Vector2(53, 108)
+
+[node name="goblin3" parent="." unique_id=1625769292 instance=ExtResource("7_5vo6v")]
+position = Vector2(202, 97)
+
+[node name="slime" parent="." unique_id=516242411 instance=ExtResource("6_raiux")]
+position = Vector2(50, 44)
+
+[node name="slime2" parent="." unique_id=1943857103 groups=["player"] instance=ExtResource("6_raiux")]
+position = Vector2(125, 122)
+
+[node name="slime3" parent="." unique_id=1692212202 instance=ExtResource("6_raiux")]
+position = Vector2(210, 27)

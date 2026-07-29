@@ -381,14 +381,14 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_13ly6"]
-size = Vector2(12, 12)
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
+radius = 5.5226803
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjgje"]
-size = Vector2(6.5, 13)
+[sub_resource type="CircleShape2D" id="CircleShape2D_qlg0r"]
+radius = 13.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yait"]
-size = Vector2(11.5, 20)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tuyoq"]
+radius = 14.0
 
 [node name="goblin" type="CharacterBody2D" unique_id=883392267]
 script = ExtResource("1_4yait")
@@ -401,18 +401,25 @@ frame = 6
 frame_progress = 0.9883651
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=714704282]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_13ly6")
+position = Vector2(1.5, 10.5)
+shape = SubResource("CircleShape2D_fjrip")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=2142108160]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=153927752]
-position = Vector2(7.75, 11)
-shape = SubResource("RectangleShape2D_tjgje")
+position = Vector2(1, 7)
+shape = SubResource("CircleShape2D_qlg0r")
 debug_color = Color(0.8366235, 0.38757202, 0, 0.41960785)
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1296326069]
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1834065103]
-position = Vector2(0.25, 7)
-shape = SubResource("RectangleShape2D_4yait")
+position = Vector2(1, 7)
+shape = SubResource("CircleShape2D_tuyoq")
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]

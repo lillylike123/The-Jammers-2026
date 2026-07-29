@@ -35,6 +35,7 @@ func _ready() -> void:
 	_update_animation()
 
 
+
 func _physics_process(_delta: float) -> void:
 	if state == State.DEAD:
 		return
@@ -90,8 +91,9 @@ func _walk_anim_name() -> String:
 	match facing:
 		"left": return "walk_left" + weapon_suffix
 		"right": return "walk_right" + weapon_suffix
-		"up": return "walk_up"
-		_: return "walk_down"
+		"up": return "walk_up" + weapon_suffix    # Fixed: added suffix
+		_: return "walk_down" + weapon_suffix     # Fixed: added suffix
+
 
 
 ## sword_attack_down/up/left/right, bow_attack_down/up/left/right
@@ -187,16 +189,24 @@ func _fade_out_and_die() -> void:
 
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
+	# If hitting an enemy's Hurtbox Area2D directly:
 	if area.has_method("take_damage"):
 		area.take_damage(sword_damage)
+	# If hitting an enemy Area2D whose parent script holds the damage logic:
 	elif area.get_parent() and area.get_parent().has_method("take_damage"):
 		area.get_parent().take_damage(sword_damage)
 
 
+
 func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if state == State.DEAD:
+		return
+		
 	var dmg := _extract_damage(area)
 	if dmg > 0:
 		take_damage(dmg)
+		print("Player was hit! Damage taken: ", dmg, " | Health left: ", health)
+
 
 
 func _extract_damage(area: Node) -> int:
