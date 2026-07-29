@@ -22,7 +22,7 @@ func _ready() -> void:
 	bow.pressed.connect(_on_button_2_pressed)
 	
 func move_to_main_menu():
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	pass
 	
 func _check_reset() -> void:
 	await get_tree().process_frame

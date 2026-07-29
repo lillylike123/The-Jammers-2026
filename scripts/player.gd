@@ -85,6 +85,8 @@ func _update_animation() -> void:
 			_play(_walk_anim_name())
 			animated_sprite.stop()
 			_fade_out_and_die()
+			await get_tree().create_timer(0.5).timeout
+			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 
 #
