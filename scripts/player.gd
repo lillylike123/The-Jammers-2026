@@ -27,7 +27,9 @@ var _can_attack: bool = true
 func _ready() -> void:
 	health = max_health
 	hitbox.monitoring = false
-	hurtbox.monitoring = true
+	hitbox.monitorable = false
+	hurtbox.monitorable = true
+	hurtbox.monitorable = true
 	hitbox.area_entered.connect(_on_hitbox_area_entered)
 	hurtbox.area_entered.connect(_on_hurtbox_area_entered)
 	animated_sprite.animation_finished.connect(_on_animation_finished)

@@ -15,6 +15,7 @@ enum State { IDLE, CHASE, ATTACK, HURT, DEAD }
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var hitbox: Area2D = $hitbox
 @onready var hurtbox: Area2D = $hurtbox
+@onready var is_dead: bool = false
 
 var health: int
 var state: State = State.IDLE
@@ -122,7 +123,7 @@ func _attack() -> void:
 	
 	# SOLID FIX: Force the boss out of the frozen attack state back into chase 
 	# mode, even if the animation loops or fails to trigger its finish signal!
-	if state == State.ATTACK:
+	if state == State.ATTACK and not ($hitbox.area_entered):
 		state = State.CHASE
 	
 	# Set when they can attempt to strike again
@@ -156,6 +157,7 @@ func _die() -> void:
 	if hurtbox: hurtbox.set_deferred("monitoring", false)
 	if hitbox: hitbox.set_deferred("monitoring", false)
 	died.emit()
+	is_dead= true
 	_update_animation()
 
 func get_damage() -> int:
@@ -178,3 +180,20 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		take_damage(area.get_damage())
 	elif "damage" in area:
 		take_damage(area.damage)
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if is_dead:
+		return
+
+	if area.has_method("take_damage"):
+		area.take_damage(contact_damage)
+		_attack()
+
+		
+
+	elif area.get_parent() and area.get_parent().has_method("take_damage"):
+		area.get_parent().take_damage(contact_damage)
+		_attack()
+
+		

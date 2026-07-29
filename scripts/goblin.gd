@@ -32,12 +32,14 @@ func _physics_process(_delta: float) -> void:
 		# FIRM OVERLAP FORCE: If very close, force a minimum movement speed 
 		# toward the player so the physics engine registers the Area2D collision!
 		if distance < 16.0:
-			velocity = direction * max(move_speed * 1.5, 35.0) 
+			velocity = direction * move_speed#max(move_speed * 1.5, 35.0) 
 		else:
 			velocity = direction * move_speed
 			
 		if animated_sprite and animated_sprite.animation != "walk":
 			animated_sprite.play("skipping around")
+		else:
+			animated_sprite.play("angry?")
 		
 		if to_player.x != 0:
 			animated_sprite.flip_h = to_player.x < 0
