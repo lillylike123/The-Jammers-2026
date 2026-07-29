@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bb6mrkpa6jh75"]
+
+[ext_resource type="Script" uid="uid://bgxbh3ojoasad" path="res://health_bar.gd" id="1_1bvlm"]
+
+[sub_resource type="Gradient" id="Gradient_y3kqx"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3nfwx"]
+gradient = SubResource("Gradient_y3kqx")
+
+[sub_resource type="Gradient" id="Gradient_6opq1"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vclpj"]
+gradient = SubResource("Gradient_6opq1")
+
+[node name="HealthBar" type="CanvasLayer" unique_id=1420117179]
+script = ExtResource("1_1bvlm")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=2128544173]
+offset_right = 72.0
+offset_bottom = 8.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_3nfwx")
+texture_progress = SubResource("GradientTexture2D_vclpj")
+tint_under = Color(0.038397167, 0.038397167, 0.03839716, 1)
+tint_progress = Color(0.19607843, 1, 0.15686275, 1)
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1295645238]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -33.0
+offset_right = 9.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 10
+text = "10:00"

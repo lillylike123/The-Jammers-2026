@@ -1,0 +1,415 @@
+[gd_scene format=4 uid="uid://dqb35jhoio6ms"]
+
+[ext_resource type="Script" uid="uid://b7d4x23gjh7li" path="res://scripts/map_5.gd" id="1_eg1we"]
+[ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_fcaox"]
+[ext_resource type="Texture2D" uid="uid://ciohacil4xto7" path="res://Assets/room_example2-sheet.png" id="2_rk4ds"]
+[ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_35btl"]
+[ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="6_upn08"]
+[ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="7_upn08"]
+[ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="8_eg1we"]
+[ext_resource type="PackedScene" uid="uid://cu48woi8bov8b" path="res://scenes/chest.tscn" id="8_hu4dh"]
+[ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_vc41j"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nuina"]
+texture = ExtResource("1_fcaox")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+32:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+35:0/0 = 0
+36:0/0 = 0
+37:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+40:0/0 = 0
+41:0/0 = 0
+42:0/0 = 0
+43:0/0 = 0
+44:0/0 = 0
+45:0/0 = 0
+46:0/0 = 0
+47:0/0 = 0
+48:0/0 = 0
+49:0/0 = 0
+50:0/0 = 0
+51:0/0 = 0
+52:0/0 = 0
+53:0/0 = 0
+54:0/0 = 0
+55:0/0 = 0
+56:0/0 = 0
+57:0/0 = 0
+58:0/0 = 0
+59:0/0 = 0
+60:0/0 = 0
+61:0/0 = 0
+62:0/0 = 0
+63:0/0 = 0
+64:0/0 = 0
+65:0/0 = 0
+66:0/0 = 0
+67:0/0 = 0
+68:0/0 = 0
+69:0/0 = 0
+70:0/0 = 0
+71:0/0 = 0
+72:0/0 = 0
+73:0/0 = 0
+74:0/0 = 0
+75:0/0 = 0
+76:0/0 = 0
+77:0/0 = 0
+78:0/0 = 0
+79:0/0 = 0
+80:0/0 = 0
+81:0/0 = 0
+82:0/0 = 0
+83:0/0 = 0
+84:0/0 = 0
+85:0/0 = 0
+86:0/0 = 0
+87:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3nfwx"]
+sources/0 = SubResource("TileSetAtlasSource_nuina")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_weenv"]
+texture = ExtResource("1_fcaox")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+32:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+35:0/0 = 0
+36:0/0 = 0
+37:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+40:0/0 = 0
+41:0/0 = 0
+42:0/0 = 0
+43:0/0 = 0
+44:0/0 = 0
+45:0/0 = 0
+46:0/0 = 0
+47:0/0 = 0
+48:0/0 = 0
+49:0/0 = 0
+50:0/0 = 0
+51:0/0 = 0
+52:0/0 = 0
+53:0/0 = 0
+54:0/0 = 0
+55:0/0 = 0
+56:0/0 = 0
+57:0/0 = 0
+58:0/0 = 0
+59:0/0 = 0
+60:0/0 = 0
+61:0/0 = 0
+62:0/0 = 0
+63:0/0 = 0
+64:0/0 = 0
+65:0/0 = 0
+66:0/0 = 0
+67:0/0 = 0
+68:0/0 = 0
+69:0/0 = 0
+70:0/0 = 0
+71:0/0 = 0
+72:0/0 = 0
+73:0/0 = 0
+74:0/0 = 0
+75:0/0 = 0
+76:0/0 = 0
+77:0/0 = 0
+78:0/0 = 0
+79:0/0 = 0
+80:0/0 = 0
+81:0/0 = 0
+82:0/0 = 0
+83:0/0 = 0
+84:0/0 = 0
+85:0/0 = 0
+86:0/0 = 0
+87:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nj656"]
+texture = ExtResource("2_rk4ds")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+32:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+35:0/0 = 0
+36:0/0 = 0
+37:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+40:0/0 = 0
+41:0/0 = 0
+42:0/0 = 0
+43:0/0 = 0
+44:0/0 = 0
+45:0/0 = 0
+46:0/0 = 0
+47:0/0 = 0
+48:0/0 = 0
+49:0/0 = 0
+50:0/0 = 0
+51:0/0 = 0
+52:0/0 = 0
+53:0/0 = 0
+54:0/0 = 0
+55:0/0 = 0
+56:0/0 = 0
+57:0/0 = 0
+58:0/0 = 0
+59:0/0 = 0
+60:0/0 = 0
+61:0/0 = 0
+62:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vclpj"]
+sources/0 = SubResource("TileSetAtlasSource_weenv")
+sources/1 = SubResource("TileSetAtlasSource_nj656")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xwfrj"]
+texture = ExtResource("1_fcaox")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+32:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+35:0/0 = 0
+36:0/0 = 0
+37:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+40:0/0 = 0
+41:0/0 = 0
+42:0/0 = 0
+43:0/0 = 0
+44:0/0 = 0
+45:0/0 = 0
+46:0/0 = 0
+47:0/0 = 0
+48:0/0 = 0
+49:0/0 = 0
+50:0/0 = 0
+51:0/0 = 0
+52:0/0 = 0
+53:0/0 = 0
+54:0/0 = 0
+55:0/0 = 0
+56:0/0 = 0
+57:0/0 = 0
+58:0/0 = 0
+59:0/0 = 0
+60:0/0 = 0
+61:0/0 = 0
+62:0/0 = 0
+63:0/0 = 0
+64:0/0 = 0
+65:0/0 = 0
+66:0/0 = 0
+67:0/0 = 0
+68:0/0 = 0
+69:0/0 = 0
+70:0/0 = 0
+71:0/0 = 0
+72:0/0 = 0
+73:0/0 = 0
+74:0/0 = 0
+75:0/0 = 0
+76:0/0 = 0
+77:0/0 = 0
+78:0/0 = 0
+79:0/0 = 0
+80:0/0 = 0
+81:0/0 = 0
+82:0/0 = 0
+83:0/0 = 0
+84:0/0 = 0
+85:0/0 = 0
+86:0/0 = 0
+87:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsgx7"]
+texture = ExtResource("3_35btl")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ocnw0"]
+sources/0 = SubResource("TileSetAtlasSource_xwfrj")
+sources/1 = SubResource("TileSetAtlasSource_nsgx7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hu4dh"]
+size = Vector2(17, 32)
+
+[node name="map5" type="Node2D" unique_id=1433693442]
+script = ExtResource("1_eg1we")
+
+[node name="Background" type="TileMapLayer" parent="." unique_id=1383470874]
+tile_map_data = PackedByteArray("AAAAAAAAAAA0AAAAAAABAAAAAAA1AAAAAAACAAAAAAA0AAAAAAADAAAAAAA1AAAAAAAEAAAAAAA0AAAAAAAFAAAAAAA1AAAAAAAGAAAAAAA0AAAAAAAHAAAAAAA1AAAAAAAIAAAAAAA0AAAAAAAJAAAAAAA1AAAAAAAKAAAAAAA0AAAAAAALAAAAAAA1AAAAAAAMAAAAAAA0AAAAAAANAAAAAAA1AAAAAAAOAAAAAAA0AAAAAAAPAAAAAAA1AAAAAAAAAAEAAAA0AAAAAAABAAEAAAA1AAAAAAACAAEAAAA0AAAAAAADAAEAAAA1AAAAAAAEAAEAAAA0AAAAAAAFAAEAAAA1AAAAAAAGAAEAAAA0AAAAAAAHAAEAAAA1AAAAAAAIAAEAAAA0AAAAAAAJAAEAAAA1AAAAAAAKAAEAAAA0AAAAAAALAAEAAAA1AAAAAAAMAAEAAAA0AAAAAAANAAEAAAA1AAAAAAAOAAEAAAA0AAAAAAAPAAEAAAA1AAAAAAAAAAIAAAA0AAAAAAABAAIAAAA1AAAAAAAAAAMAAAA0AAAAAAABAAMAAAA1AAAAAAAAAAQAAAA0AAAAAAABAAQAAAA1AAAAAAAAAAUAAAA0AAAAAAABAAUAAAA1AAAAAAAAAAYAAAA0AAAAAAABAAYAAAA1AAAAAAAAAAcAAAA0AAAAAAABAAcAAAA1AAAAAAAAAAgAAAA0AAAAAAABAAgAAAA1AAAAAAACAAgAAAA0AAAAAAADAAgAAAA1AAAAAAAEAAgAAAA0AAAAAAAFAAgAAAA1AAAAAAAGAAgAAAA0AAAAAAAHAAgAAAA1AAAAAAAIAAgAAAA0AAAAAAAJAAgAAAA1AAAAAAAKAAgAAAA0AAAAAAALAAgAAAA1AAAAAAAMAAgAAAA0AAAAAAANAAgAAAA1AAAAAAAOAAgAAAA0AAAAAAAPAAgAAAA1AAAAAAAOAAcAAAA0AAAAAAAPAAcAAAA1AAAAAAAOAAYAAAA0AAAAAAAPAAYAAAA1AAAAAAAOAAUAAAA0AAAAAAAPAAUAAAA1AAAAAAAOAAQAAAA0AAAAAAAPAAQAAAA1AAAAAAAOAAMAAAA0AAAAAAAPAAMAAAA1AAAAAAAOAAIAAAA0AAAAAAAPAAIAAAA1AAAAAAACAAcAAAA0AAAAAAADAAcAAAA1AAAAAAACAAYAAAA0AAAAAAADAAYAAAA1AAAAAAACAAUAAAA0AAAAAAADAAUAAAA1AAAAAAACAAQAAAA0AAAAAAADAAQAAAA1AAAAAAACAAMAAAA0AAAAAAADAAMAAAA1AAAAAAACAAIAAAA0AAAAAAADAAIAAAA1AAAAAAAEAAcAAAA0AAAAAAAFAAcAAAA1AAAAAAAEAAYAAAA0AAAAAAAFAAYAAAA1AAAAAAAEAAUAAAA0AAAAAAAFAAUAAAA1AAAAAAAEAAQAAAA0AAAAAAAFAAQAAAA1AAAAAAAEAAMAAAA0AAAAAAAFAAMAAAA1AAAAAAAEAAIAAAA0AAAAAAAFAAIAAAA1AAAAAAAGAAcAAAA0AAAAAAAHAAcAAAA1AAAAAAAGAAYAAAA0AAAAAAAHAAYAAAA1AAAAAAAGAAUAAAA0AAAAAAAHAAUAAAA1AAAAAAAGAAQAAAA0AAAAAAAHAAQAAAA1AAAAAAAGAAMAAAA0AAAAAAAHAAMAAAA1AAAAAAAGAAIAAAA0AAAAAAAHAAIAAAA1AAAAAAAIAAcAAAA0AAAAAAAJAAcAAAA1AAAAAAAIAAYAAAA0AAAAAAAJAAYAAAA1AAAAAAAIAAUAAAA0AAAAAAAJAAUAAAA1AAAAAAAIAAQAAAA0AAAAAAAJAAQAAAA1AAAAAAAIAAMAAAA0AAAAAAAJAAMAAAA1AAAAAAAIAAIAAAA0AAAAAAAJAAIAAAA1AAAAAAAKAAcAAAA0AAAAAAALAAcAAAA1AAAAAAAKAAYAAAA0AAAAAAALAAYAAAA1AAAAAAAKAAUAAAA0AAAAAAALAAUAAAA1AAAAAAAKAAQAAAA0AAAAAAALAAQAAAA1AAAAAAAKAAMAAAA0AAAAAAALAAMAAAA1AAAAAAAKAAIAAAA0AAAAAAALAAIAAAA1AAAAAAAMAAcAAAA0AAAAAAANAAcAAAA1AAAAAAAMAAYAAAA0AAAAAAANAAYAAAA1AAAAAAAMAAUAAAA0AAAAAAANAAUAAAA1AAAAAAAMAAQAAAA0AAAAAAANAAQAAAA1AAAAAAAMAAMAAAA0AAAAAAANAAMAAAA1AAAAAAAMAAIAAAA0AAAAAAANAAIAAAA1AAAAAAA=")
+tile_set = SubResource("TileSet_3nfwx")
+
+[node name="Base tiles" type="TileMapLayer" parent="." unique_id=1320186859]
+tile_map_data = PackedByteArray("AAAAAAAAAABBAAAAAAAEAAAAAABBAAAAAAABAAAAAAA+AAAAAAACAAAAAAA+AAAAAAADAAAAAAA+AAAAAAACAAEAAAA/AAAAAAADAAEAAABAAAAAAAACAAIAAABKAAAAAAADAAIAAABLAAAAAAADAAMAAQANAAAAAAAEAAMAAQAJAAAAAAADAAQAAABBAAAAAAAEAAQAAQASAAAAAAAEAAUAAQAfAAAAAAAFAAUAAQAgAAAAAAAGAAUAAQAhAAAAAAAHAAUAAQAiAAAAAAAIAAUAAQAjAAAAAAAJAAUAAQAkAAAAAAAKAAUAAQAlAAAAAAAFAAQAAQATAAAAAAAGAAQAAQAUAAAAAAAHAAQAAQAVAAAAAAAIAAQAAQAWAAAAAAAJAAQAAQAXAAAAAAAKAAQAAQAYAAAAAAALAAQAAQAZAAAAAAALAAUAAQAmAAAAAAAIAAYAAQAtAAAAAAAHAAYAAQAtAAAAAAAGAAYAAQAtAAAAAAAFAAYAAQAtAAAAAAAJAAYAAQAtAAAAAAAKAAYAAQAuAAAAAAAEAAYAAQAsAAAAAAAGAAMAAQAKAAAAAAAFAAMAAQAKAAAAAAAHAAMAAQAKAAAAAAAIAAMAAQAKAAAAAAAJAAMAAQAKAAAAAAAKAAMAAQALAAAAAAAMAAUAAABBAAAAAAAMAAYAAABBAAAAAAANAAYAAQApAAAAAAAOAAYAAABAAAAAAAANAAcAAABKAAAAAAAOAAcAAQAyAAAAAAAPAAYAAABBAAAAAAAPAAUAAAA+AAAAAAALAAMAAAA+AAAAAAAMAAMAAAA+AAAAAAALAAIAAQA6AAAAAAAMAAIAAAA3AAAAAAALAAEAAAAoAAAAAAAMAAEAAAApAAAAAAANAAEAAABBAAAAAAAOAAEAAABBAAAAAAAOAAAAAAA+AAAAAAADAAUAAABJAAAAAAACAAMAAABMAAAAAAAAAAEAAABOAAAAAAABAAEAAABPAAAAAAALAAYAAABOAAAAAAAMAAQAAABMAAAAAAAOAAIAAABMAAAAAAANAAIAAABJAAAAAAANAAgAAABOAAAAAAAOAAgAAABPAAAAAAAPAAcAAABPAAAAAAAMAAcAAABOAAAAAAALAAAAAAAtAAAAAAAMAAAAAAAuAAAAAAANAAAAAAAvAAAAAAAKAAAAAAAsAAAAAAAKAAEAAAA6AAAAAAA=")
+tile_set = SubResource("TileSet_vclpj")
+
+[node name="Deco" type="TileMapLayer" parent="." unique_id=532597906]
+tile_map_data = PackedByteArray("AAACAAEAAABWAAAAAAAPAAYAAABXAAAAAAALAAEAAAAxAAAAAAAMAAEAAAAyAAAAAAAOAAAAAQABAAAAAAAOAAEAAQADAAAAAAA=")
+tile_set = SubResource("TileSet_ocnw0")
+
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=853604435]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2029520304]
+polygon = PackedVector2Array(-2, 17, 1, 142, 275, 145, 278, 0, 275, -16, 0, -20, -1, -3, 0, 0, 78, 0, 79, 10, 78, 14, 64, 16, 64, 59, 64, 64, 175, 63, 176, 31, 181, 31, 182, 22, 200, 23, 208, 22, 206, 16, 224, 14, 224, 0, 236, -1, 239, 3, 240, 11, 241, 22, 242, 33, 208, 33, 208, 62, 193, 64, 191, 79, 206, 79, 208, 79, 207, 93, 237, 95, 240, 79, 254, 79, 256, 110, 240, 111, 240, 125, 208, 127, 207, 110, 193, 110, 192, 94, 158, 95, 158, 85, 78, 86, 78, 94, 65, 96, 63, 79, 48, 79, 47, 49, 31, 48, 31, 14, 0, 15, -2, -1)
+
+[node name="player" parent="." unique_id=496868096 instance=ExtResource("8_vc41j")]
+position = Vector2(34, 0)
+
+[node name="goblin" parent="." unique_id=883392267 instance=ExtResource("6_upn08")]
+position = Vector2(199, 20)
+
+[node name="goblin2" parent="." unique_id=312939429 instance=ExtResource("6_upn08")]
+position = Vector2(118, 67)
+
+[node name="goblin3" parent="." unique_id=1981140447 instance=ExtResource("6_upn08")]
+position = Vector2(54, 28)
+
+[node name="Door" type="Area2D" parent="." unique_id=929653840]
+script = ExtResource("7_upn08")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=41046283]
+position = Vector2(232, 15)
+shape = SubResource("RectangleShape2D_hu4dh")
+
+[node name="Chest" parent="." unique_id=1257304748 instance=ExtResource("8_hu4dh")]
+position = Vector2(176, 76)
+
+[node name="slime" parent="." unique_id=516242411 instance=ExtResource("8_eg1we")]
+position = Vector2(226, 106)
+
+[node name="slime2" parent="." unique_id=1365073245 instance=ExtResource("8_eg1we")]
+position = Vector2(199, 81)

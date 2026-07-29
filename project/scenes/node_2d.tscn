@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b2rp1q3wd2imn"]
+
+[ext_resource type="FontFile" uid="uid://pp6chplqw1kt" path="res://DungeonFont.ttf" id="1_rnjyy"]
+[ext_resource type="Texture2D" uid="uid://dbahp5lptpfko" path="res://Assets/dialoge-box.png" id="2_4vge2"]
+[ext_resource type="Script" uid="uid://btur5u15a1vot" path="res://scripts/button.gd" id="3_rnjyy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_78qe6"]
+content_margin_left = 10.0
+content_margin_right = 8.0
+texture = ExtResource("2_4vge2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4vge2"]
+content_margin_left = 10.0
+content_margin_right = 8.0
+texture = ExtResource("2_4vge2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04qyp"]
+content_margin_left = 10.0
+content_margin_right = 8.0
+texture = ExtResource("2_4vge2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnjyy"]
+content_margin_left = 10.0
+content_margin_right = 8.0
+texture = ExtResource("2_4vge2")
+
+[node name="Node2D" type="Node2D" unique_id=689261688]
+
+[node name="Button" type="Button" parent="." unique_id=227219626]
+custom_minimum_size = Vector2(256, 96)
+custom_maximum_size = Vector2(256, 96)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_right = 256.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_rnjyy")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_78qe6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4vge2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_04qyp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_rnjyy")
+alignment = 0
+autowrap_mode = 3
+script = ExtResource("3_rnjyy")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

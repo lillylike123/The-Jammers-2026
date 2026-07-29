@@ -1,4 +1,4 @@
-<img src="Assets/banner.png">
+<img src="banner.png">
 
 A hero was tending to his ill grandmother. To find a cure for her disease he searched the streets and a mysterious man informs him of a healing tome located deep in a dungeon. He is curious so he finds the dungeon and explores it, but he's tricked and he's trapped. He has to fight to be able to leave the dungeon or die there.
 
