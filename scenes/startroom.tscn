@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="2_81fqo"]
 [ext_resource type="PackedScene" uid="uid://5oikbjtgf0p7" path="res://scenes/minotaur.tscn" id="4_66qk8"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_yviva"]
+[ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="5_66qk8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_exvue"]
 texture = ExtResource("1_ima13")
@@ -116,6 +117,9 @@ texture = ExtResource("2_81fqo")
 [sub_resource type="TileSet" id="TileSet_vclpj"]
 sources/0 = SubResource("TileSetAtlasSource_x4umr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0spv"]
+size = Vector2(17, 18)
+
 [node name="Startroom" type="Node2D" unique_id=1436152442]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1739391825]
@@ -136,3 +140,10 @@ position = Vector2(11, 56)
 
 [node name="CharacterBody2D" parent="." unique_id=1949039495 instance=ExtResource("4_66qk8")]
 position = Vector2(124, 75)
+
+[node name="Door" type="Area2D" parent="." unique_id=409513695]
+script = ExtResource("5_66qk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1746100710]
+position = Vector2(136, 134)
+shape = SubResource("RectangleShape2D_p0spv")

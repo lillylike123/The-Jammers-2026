@@ -1,18 +1,23 @@
 extends Area2D
 
+var is_locked: bool = true
+
 func _ready() -> void:
-	# Look at the Inspector for this node and set:
-	# Collision -> Layer: Leave Empty
-	# Collision -> Mask: Check Box 2 (Player Hurtbox) or Box 1 (wherever player body is)
 	body_entered.connect(_on_body_entered)
+	modulate.a = 0.3 
+
+func unlock_door() -> void:
+	is_locked = false
+	modulate.a = 1.0 
+	print("Exit Door: The path forward is unlocked!")
 
 func _on_body_entered(body: Node2D) -> void:
-	# Check if the node entering the door is your player
 	if body.is_in_group("player"):
-		print("Door: Player entered! Changing rooms...")
-		
-		# 1. Clear out the player reference before changing scenes to prevent enemy crashes
+		if is_locked:
+			print("Exit Door: It's locked! You must defeat the boss first.")
+			return 
+			
+		print("Exit Door: Transitioning to the final area...")
 		GameManager.unregister_player(body)
 		
-		# 2. Tell the Room Manager to pick a random map and launch it!
-		Roommanger.load_next_random_room()
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/main_menu.tscn")

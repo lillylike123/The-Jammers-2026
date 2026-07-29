@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_x0ugi"]
 [ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="6_raiux"]
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="7_5vo6v"]
-[ext_resource type="Script" uid="uid://xd8wwkxfiydg" path="res://scenes/door.gd" id="7_p7jwj"]
+[ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="7_p7jwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na4y3"]
 texture = ExtResource("1_cf5bg")

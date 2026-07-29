@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_frbht"]
 [ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="5_5w0ad"]
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="6_kocsa"]
-[ext_resource type="Script" uid="uid://xd8wwkxfiydg" path="res://scenes/door.gd" id="6_uic66"]
+[ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="7_exien"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_5w0ad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcsii"]
@@ -681,7 +681,7 @@ sources/0 = SubResource("TileSetAtlasSource_bik57")
 sources/1 = SubResource("TileSetAtlasSource_6wyyh")
 sources/2 = SubResource("TileSetAtlasSource_ab82m")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nfwx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w0ad"]
 size = Vector2(17, 32)
 
 [node name="Map2" type="Node2D" unique_id=510806995]
@@ -731,12 +731,12 @@ position = Vector2(122, 6)
 [node name="goblin3" parent="." unique_id=1066940557 instance=ExtResource("6_kocsa")]
 position = Vector2(210, 22)
 
-[node name="Door" type="Area2D" parent="." unique_id=751689625]
-script = ExtResource("6_uic66")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=969848435]
-position = Vector2(247, 62)
-shape = SubResource("RectangleShape2D_3nfwx")
-
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("8_5w0ad")]
 position = Vector2(1, 106)
+
+[node name="Door" type="Area2D" parent="." unique_id=240862595]
+script = ExtResource("7_exien")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1946501811]
+position = Vector2(248, 61)
+shape = SubResource("RectangleShape2D_5w0ad")
