@@ -393,7 +393,6 @@ radius = 8.5440035
 [node name="goblin" type="CharacterBody2D" unique_id=883392267]
 script = ExtResource("1_4yait")
 speed = 20.0
-max_health = 50
 contact_damage = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=154218210]

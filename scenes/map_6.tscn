@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_dkfrg"]
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="2_5k43a"]
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="5_wulgb"]
-[ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="6_7g08o"]
 [ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="6_wulgb"]
+[ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="7_o0bkn"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="7_w8t5o"]
 [ext_resource type="PackedScene" uid="uid://cu48woi8bov8b" path="res://scenes/chest.tscn" id="7_xkdms"]
 
@@ -426,15 +426,6 @@ position = Vector2(118, 101)
 [node name="goblin3" parent="." unique_id=1289988442 instance=ExtResource("5_wulgb")]
 position = Vector2(152, 27)
 
-[node name="CharacterBody2D" parent="." unique_id=771616215 instance=ExtResource("6_7g08o")]
-position = Vector2(168, 80)
-
-[node name="CharacterBody2D2" parent="." unique_id=1107953216 instance=ExtResource("6_7g08o")]
-position = Vector2(225, 83)
-
-[node name="CharacterBody2D3" parent="." unique_id=941218214 instance=ExtResource("6_7g08o")]
-position = Vector2(84, 57)
-
 [node name="Door" type="Area2D" parent="." unique_id=479457625]
 script = ExtResource("6_wulgb")
 
@@ -444,3 +435,12 @@ shape = SubResource("RectangleShape2D_xkdms")
 
 [node name="Chest" parent="." unique_id=1257304748 instance=ExtResource("7_xkdms")]
 position = Vector2(112, 60)
+
+[node name="slime" parent="." unique_id=516242411 instance=ExtResource("7_o0bkn")]
+position = Vector2(148, 76)
+
+[node name="slime2" parent="." unique_id=520314164 instance=ExtResource("7_o0bkn")]
+position = Vector2(229, 79)
+
+[node name="slime3" parent="." unique_id=398978307 instance=ExtResource("7_o0bkn")]
+position = Vector2(46, 97)

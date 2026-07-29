@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_fcaox"]
 [ext_resource type="Texture2D" uid="uid://ciohacil4xto7" path="res://Assets/room_example2-sheet.png" id="2_rk4ds"]
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_35btl"]
-[ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="6_2gudk"]
 [ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="6_upn08"]
 [ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="7_upn08"]
+[ext_resource type="PackedScene" uid="uid://dk6i8skx07thv" path="res://scenes/blue slime.tscn" id="8_eg1we"]
 [ext_resource type="PackedScene" uid="uid://cu48woi8bov8b" path="res://scenes/chest.tscn" id="8_hu4dh"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_vc41j"]
 
@@ -396,12 +396,6 @@ position = Vector2(118, 67)
 [node name="goblin3" parent="." unique_id=1981140447 instance=ExtResource("6_upn08")]
 position = Vector2(54, 28)
 
-[node name="CharacterBody2D" parent="." unique_id=771616215 instance=ExtResource("6_2gudk")]
-position = Vector2(239, 101)
-
-[node name="CharacterBody2D2" parent="." unique_id=1919906894 instance=ExtResource("6_2gudk")]
-position = Vector2(185, 55)
-
 [node name="Door" type="Area2D" parent="." unique_id=929653840]
 script = ExtResource("7_upn08")
 
@@ -411,3 +405,9 @@ shape = SubResource("RectangleShape2D_hu4dh")
 
 [node name="Chest" parent="." unique_id=1257304748 instance=ExtResource("8_hu4dh")]
 position = Vector2(176, 76)
+
+[node name="slime" parent="." unique_id=516242411 instance=ExtResource("8_eg1we")]
+position = Vector2(226, 106)
+
+[node name="slime2" parent="." unique_id=1365073245 instance=ExtResource("8_eg1we")]
+position = Vector2(199, 81)

@@ -5,9 +5,9 @@ signal died
 enum State { IDLE, CHASE, ATTACK, HURT, DEAD }
 
 @export var speed: float = 65.0
-@export var max_health: int = 1         # FIXED: Set to exactly 1 HP
-@export var contact_damage: int = 40    # High damage to make it a threat!
-@export var aggro_range: float = 260.0
+@export var max_health: int = 50       
+@export var contact_damage: int = 10   
+@export var aggro_range: float = 50.0
 @export var attack_range: float = 60.0
 @export var attack_cooldown: float = 1.0
 

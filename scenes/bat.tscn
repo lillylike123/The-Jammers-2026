@@ -310,14 +310,13 @@ animations = [{
 radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78qe6"]
-radius = 17.029387
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nfwx"]
-radius = 17.0
+radius = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=771616215]
 script = ExtResource("1_cnldk")
-health = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281846691]
 sprite_frames = SubResource("SpriteFrames_13ly6")
@@ -331,12 +330,15 @@ position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_13ly6")
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=1582894100]
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1811609502]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_78qe6")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=693754527]
+collision_layer = 3
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1091263582]
 position = Vector2(1, 0)

@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @export var move_speed: float = 10.0
-@export var contact_damage: int = 15
-@export var health: int = 100
+@export var contact_damage: int = 5
+@export var health: int = 50
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -24,7 +24,7 @@ func _physics_process(_delta: float) -> void:
 	var max_aggro_range: float = 50.0
 	
 	if distance <= max_aggro_range:
-		var direction: Vector2 = Vector2.DOWN # Default direction if perfectly overlapping
+		var direction: Vector2 = Vector2.DOWN 
 		
 		if distance > 1.0:
 			direction = to_player.normalized()
@@ -34,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 		else:
 			velocity = direction * move_speed
 			
-		if animated_sprite and animated_sprite.animation != "walk":
+		if animated_sprite and animated_sprite.animation != "fly":
 			animated_sprite.play("fly")
 		
 		if to_player.x != 0:
@@ -55,7 +55,7 @@ func take_damage(amount: int) -> void:
 		self.set("health", 100) 
 		
 	health = max(health - amount, 0)
-	print("Goblin health remaining: ", health)
+	print("Enemy health remaining: ", health)
 	
 	if health <= 0:
 		_die()
@@ -63,36 +63,28 @@ func take_damage(amount: int) -> void:
 func _die() -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
-	print("Goblin has died!")
-	
+	print("Enemy has died!")
 	queue_free()
-	
-
 
 func get_damage() -> int:
 	return contact_damage
 
-
 func _on_hurtbox_area_entered(area: Area2D) -> void:
-	if is_dead:
-		return
-		
-	if area.has_method("take_damage"):
-		area.take_damage(contact_damage)
-		
-	elif area.get_parent() and area.get_parent().has_method("take_damage"):
-		area.get_parent().take_damage(contact_damage)
-
-
-func _on_hitbox_area_entered(area: Area2D) -> void:
 	if is_dead:
 		return
 	
 	if area.has_method("get_damage"):
 		take_damage(area.get_damage())
-		
 	elif "damage" in area:
 		take_damage(area.damage)
-		
 	elif area.get_parent() and "damage" in area.get_parent():
 		take_damage(area.get_parent().damage)
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if is_dead:
+		return
+		
+	if area.has_method("take_damage"):
+		area.take_damage(contact_damage)
+	elif area.get_parent() and area.get_parent().has_method("take_damage"):
+		area.get_parent().take_damage(contact_damage)
