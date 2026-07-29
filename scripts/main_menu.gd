@@ -12,6 +12,10 @@ func move_to_weapon_select():
 func move_to_settings():
 	get_tree().change_scene_to_file("res://scenes/settings.tscn")
 
+func _on_main_menu_button_pressed() -> void:
+	HealthBar.hide_and_reset_hud() 
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

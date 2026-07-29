@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="6_7g08o"]
 [ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="6_wulgb"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="7_w8t5o"]
+[ext_resource type="PackedScene" uid="uid://cu48woi8bov8b" path="res://scenes/chest.tscn" id="7_xkdms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5k43a"]
 texture = ExtResource("1_dkfrg")
@@ -440,3 +441,6 @@ script = ExtResource("6_wulgb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=369515463]
 position = Vector2(248, 80)
 shape = SubResource("RectangleShape2D_xkdms")
+
+[node name="Chest" parent="." unique_id=1257304748 instance=ExtResource("7_xkdms")]
+position = Vector2(112, 60)

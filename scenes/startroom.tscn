@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5oikbjtgf0p7" path="res://scenes/minotaur.tscn" id="4_66qk8"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="4_yviva"]
 [ext_resource type="Script" uid="uid://bcvp25yrkf7kb" path="res://scenes/teleporter.gd" id="5_66qk8"]
+[ext_resource type="PackedScene" uid="uid://cu48woi8bov8b" path="res://scenes/chest.tscn" id="6_p0spv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_exvue"]
 texture = ExtResource("1_ima13")
@@ -147,3 +148,6 @@ script = ExtResource("5_66qk8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1746100710]
 position = Vector2(136, 134)
 shape = SubResource("RectangleShape2D_p0spv")
+
+[node name="Chest" parent="." unique_id=1257304748 instance=ExtResource("6_p0spv")]
+position = Vector2(128, 60)

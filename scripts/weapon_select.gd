@@ -32,6 +32,8 @@ func _on_button_pressed() -> void:
 	_start_game()
 func _start_game() -> void:
 	get_tree().change_scene_to_file("res://scenes/startroom.tscn")
+	HealthBar.start_hud()
+
 func _on_button_2_pressed() -> void:
 	GameManager.set_weapon(GameManager.Weapon.BOW)
 	_start_game()

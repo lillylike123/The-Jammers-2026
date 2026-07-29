@@ -218,3 +218,17 @@ func _extract_damage(area: Node) -> int:
 	if parent and "damage" in parent:
 		return parent.damage
 	return 0
+
+func heal(amount: int) -> void:
+	if state == State.DEAD:
+		return
+	
+	health = min(health + amount, max_health)
+	
+	hurt.emit(health, max_health)
+	
+	print("Player healed! Current health: ", health, "/", max_health)
+	
+	var tween := create_tween()
+	tween.tween_property(animated_sprite, "modulate", Color(0.4, 1.0, 0.4), 0.1)
+	tween.tween_property(animated_sprite, "modulate", Color(1, 1, 1), 0.1)
