@@ -8,7 +8,7 @@ func _ready() -> void:
 	Settings.pressed.connect(move_to_settings)
 
 func move_to_weapon_select():
-	get_tree().change_scene_to_file("res://scenes/weapon_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/node_2d.tscn")
 	
 func move_to_settings():
 	get_tree().change_scene_to_file("res://scenes/settings.tscn")

@@ -709,6 +709,7 @@ radius = 4.609772
 
 [node name="player" type="CharacterBody2D" unique_id=496868096 groups=["player"]]
 script = ExtResource("1_g2els")
+max_health = 200
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1524512008]
 position = Vector2(5, 1)
@@ -716,7 +717,6 @@ sprite_frames = SubResource("SpriteFrames_3nfwx")
 animation = &"sword_attack_right"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1706544597]
-collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1554899029]
@@ -724,11 +724,11 @@ position = Vector2(6, 5)
 shape = SubResource("CircleShape2D_qhqgy")
 debug_color = Color(0.8096832, 0.41290253, 0, 0.41960785)
 
-[node name="Hurtbox" type="Area2D" parent="." unique_id=1199755038]
-collision_layer = 2
-collision_mask = 0
+[node name="player_hurtbox" type="Area2D" parent="." unique_id=1199755038]
+collision_layer = 3
+collision_mask = 8
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox" unique_id=1028197561]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="player_hurtbox" unique_id=1028197561]
 position = Vector2(6, 5)
 shape = SubResource("CircleShape2D_g2els")
 
