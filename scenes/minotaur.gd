@@ -58,18 +58,18 @@ func _physics_process(_delta: float) -> void:
 			if dist > aggro_range * 1.3:
 				state = State.IDLE
 				velocity = Vector2.ZERO
-			elif dist <= attack_range:
+			elif dist <= attack_range and _can_attack:
 				# FIXED: Only freeze velocity if the boss is actually allowed to strike!
-				if _can_attack:
-					velocity = Vector2.ZERO
-					_attack()
-				else:
+				#if _can_attack:
+				velocity = Vector2.ZERO
+				_attack()
+			else:
 					# If the attack is on cooldown, keep pressing forward!
 					velocity = to_player.normalized() * speed
 					_face_direction(to_player.x)
-			else:
-				velocity = to_player.normalized() * speed
-				_face_direction(to_player.x)
+			#else:
+				#velocity = to_player.normalized() * speed
+				#_face_direction(to_player.x)
 
 		State.ATTACK, State.HURT:
 			velocity = Vector2.ZERO
@@ -77,7 +77,8 @@ func _physics_process(_delta: float) -> void:
 	# Crucial: Ensure move_and_slide runs during ATTACK recovery if needed,
 	# but keeping it safe under CHASE/IDLE match bounds
 	if state == State.CHASE or state == State.IDLE:
-		move_and_slide()
+		pass
+	move_and_slide()
 
 	_update_animation()
 
@@ -108,9 +109,15 @@ func _play(anim_name: String) -> void:
 			animated_sprite.play(anim_name)
 
 func _attack() -> void:
+	if state == State.ATTACK:
+		return
 	state = State.ATTACK
 	_can_attack = false
-	_update_animation()
+	if animated_sprite.sprite_frames.has_animation("attack"):
+		animated_sprite.play("attack")
+	else:
+		push_warning("Boss: missing animation 'attack'")
+	#	_update_animation()
 	
 	# Turn on attack hitbox frames
 	if hitbox: 
@@ -123,7 +130,7 @@ func _attack() -> void:
 	
 	# SOLID FIX: Force the boss out of the frozen attack state back into chase 
 	# mode, even if the animation loops or fails to trigger its finish signal!
-	if state == State.ATTACK and not ($hitbox.area_entered):
+	if state == State.ATTACK :
 		state = State.CHASE
 	
 	# Set when they can attempt to strike again
@@ -188,12 +195,12 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 
 	if area.has_method("take_damage"):
 		area.take_damage(contact_damage)
-		_attack()
+		
 
 		
 
 	elif area.get_parent() and area.get_parent().has_method("take_damage"):
 		area.get_parent().take_damage(contact_damage)
-		_attack()
+		
 
 		
