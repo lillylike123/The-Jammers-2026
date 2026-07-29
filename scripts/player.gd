@@ -15,7 +15,7 @@ enum State { MOVE, ATTACK, HURT, DEAD }
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var hitbox: Area2D = $Hitbox
-@onready var hurtbox: Area2D = $Hurtbox
+@onready var hurtbox: Area2D = $player_hurtbox
 
 var health: int
 var state: State = State.MOVE

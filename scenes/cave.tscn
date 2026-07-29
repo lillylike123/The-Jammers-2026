@@ -319,6 +319,7 @@ polygon = PackedVector2Array(2, 0, 12, 0, 12, 23, 12, 19, 34, 19, 36, 0, 60, 0, 
 
 [node name="Statue Boss" parent="." unique_id=1005668714 instance=ExtResource("3_rawnq")]
 position = Vector2(124, 43)
+max_health = 50
 
 [node name="Door" type="Area2D" parent="." unique_id=2001605669]
 script = ExtResource("5_6sqbx")

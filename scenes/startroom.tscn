@@ -137,7 +137,7 @@ tile_set = SubResource("TileSet_vclpj")
 polygon = PackedVector2Array(-32, -8, -32, 168, 272, 168, 280, -24, 0, -40, 0, 0, -3, 32, 256, 32, 256, 136, 256, 144, 0, 144, -1, -2, -24, 32, -24, 144)
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("4_yviva")]
-position = Vector2(11, 56)
+position = Vector2(8, 57)
 
 [node name="CharacterBody2D" parent="." unique_id=1949039495 instance=ExtResource("4_66qk8")]
 position = Vector2(124, 75)
