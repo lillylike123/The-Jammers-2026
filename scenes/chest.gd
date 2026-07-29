@@ -12,7 +12,6 @@ func _ready() -> void:
 	if animated_sprite:
 		animated_sprite.play("closed")
 	
-	# Connect proximity triggers
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
@@ -26,7 +25,7 @@ func _on_body_exited(incoming_node: Node2D) -> void:
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		print("MOUSE CLICK DETECTED ON CHEST! Nearby status: ", player_nearby) # ADD THIS LINE
+		print("MOUSE CLICK DETECTED ON CHEST! Nearby status: ", player_nearby) 
 		if player_nearby and not is_already_opened:
 			_open_chest()
 
