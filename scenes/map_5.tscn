@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://ccgahtguipc0c" path="res://Assets/GMTK2026_tiles-export-sheet.png" id="1_fcaox"]
 [ext_resource type="Texture2D" uid="uid://ciohacil4xto7" path="res://Assets/room_example2-sheet.png" id="2_rk4ds"]
 [ext_resource type="Texture2D" uid="uid://c1bug03064ler" path="res://Door-sheet.png" id="3_35btl"]
-[ext_resource type="PackedScene" uid="uid://7bhd0pf1p1x6" path="res://scenes/rat.tscn" id="4_hu4dh"]
+[ext_resource type="Script" uid="uid://xd8wwkxfiydg" path="res://scenes/door.gd" id="4_fh7ip"]
 [ext_resource type="PackedScene" uid="uid://drspksxyw4eyl" path="res://scenes/bat.tscn" id="6_2gudk"]
+[ext_resource type="PackedScene" uid="uid://cxvt0konpcawr" path="res://scenes/goblin.tscn" id="6_upn08"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="8_vc41j"]
-[ext_resource type="PackedScene" uid="uid://bqfi4w85w58ff" path="res://scenes/timer.tscn" id="9_eg1we"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nuina"]
 texture = ExtResource("1_fcaox")
@@ -361,6 +361,9 @@ texture = ExtResource("3_35btl")
 sources/0 = SubResource("TileSetAtlasSource_xwfrj")
 sources/1 = SubResource("TileSetAtlasSource_nsgx7")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjptk"]
+size = Vector2(14.5, 32)
+
 [node name="map5" type="Node2D" unique_id=1433693442]
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=1383470874]
@@ -375,31 +378,32 @@ tile_set = SubResource("TileSet_vclpj")
 tile_map_data = PackedByteArray("AAACAAEAAABWAAAAAAAPAAYAAABXAAAAAAALAAEAAAAxAAAAAAAMAAEAAAAyAAAAAAAOAAAAAQABAAAAAAAOAAEAAQADAAAAAAA=")
 tile_set = SubResource("TileSet_ocnw0")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1133103780]
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=853604435]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2029520304]
 polygon = PackedVector2Array(-2, 17, 1, 142, 275, 145, 278, 0, 275, -16, 0, -20, -1, -3, 0, 0, 78, 0, 79, 10, 78, 14, 64, 16, 64, 59, 64, 64, 175, 63, 176, 31, 181, 31, 182, 22, 200, 23, 208, 22, 206, 16, 224, 14, 224, 0, 236, -1, 239, 3, 240, 11, 241, 22, 242, 33, 208, 33, 208, 62, 193, 64, 191, 79, 206, 79, 208, 79, 207, 93, 237, 95, 240, 79, 254, 79, 256, 110, 240, 111, 240, 125, 208, 127, 207, 110, 193, 110, 192, 94, 158, 95, 158, 85, 78, 86, 78, 94, 65, 96, 63, 79, 48, 79, 47, 49, 31, 48, 31, 14, 0, 15, -2, -1)
 
-[node name="CharacterBody2D" parent="." unique_id=16213657 instance=ExtResource("4_hu4dh")]
-position = Vector2(22, -4)
+[node name="Door" type="Area2D" parent="." unique_id=1753086816]
+script = ExtResource("4_fh7ip")
 
-[node name="CharacterBody2D2" parent="." unique_id=939946734 instance=ExtResource("4_hu4dh")]
-position = Vector2(59, 60)
-
-[node name="CharacterBody2D3" parent="." unique_id=1225753052 instance=ExtResource("4_hu4dh")]
-position = Vector2(210, 91)
-
-[node name="CharacterBody2D4" parent="." unique_id=771616215 instance=ExtResource("6_2gudk")]
-position = Vector2(70, 6)
-
-[node name="CharacterBody2D5" parent="." unique_id=355760742 instance=ExtResource("6_2gudk")]
-position = Vector2(231, 114)
-
-[node name="CharacterBody2D6" parent="." unique_id=1168840559 instance=ExtResource("6_2gudk")]
-position = Vector2(194, 11)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=533228199]
+position = Vector2(231.25, 16)
+shape = SubResource("RectangleShape2D_rjptk")
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("8_vc41j")]
-position = Vector2(41, 27)
+position = Vector2(34, 0)
 
-[node name="Timer" parent="player" unique_id=20635280 instance=ExtResource("9_eg1we")]
-position = Vector2(205, -17)
+[node name="goblin" parent="." unique_id=883392267 instance=ExtResource("6_upn08")]
+position = Vector2(199, 20)
+
+[node name="goblin2" parent="." unique_id=312939429 instance=ExtResource("6_upn08")]
+position = Vector2(118, 67)
+
+[node name="goblin3" parent="." unique_id=1981140447 instance=ExtResource("6_upn08")]
+position = Vector2(54, 28)
+
+[node name="CharacterBody2D" parent="." unique_id=771616215 instance=ExtResource("6_2gudk")]
+position = Vector2(239, 101)
+
+[node name="CharacterBody2D2" parent="." unique_id=1919906894 instance=ExtResource("6_2gudk")]
+position = Vector2(185, 55)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7bhd0pf1p1x6"]
 
 [ext_resource type="Texture2D" uid="uid://bs6q6kqu86gho" path="res://Assets/rat and bat spritesheet calciumtrice.png" id="1_1l88y"]
-[ext_resource type="Script" uid="uid://cf44gipb6pwhu" path="res://scenes/rat.gd" id="1_77a1s"]
+[ext_resource type="Script" uid="uid://cf44gipb6pwhu" path="res://scripts/rat.gd" id="1_77a1s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_77a1s"]
 atlas = ExtResource("1_1l88y")

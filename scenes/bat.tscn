@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drspksxyw4eyl"]
 
-[ext_resource type="Script" uid="uid://3o7n4pmvnodg" path="res://scenes/bat.gd" id="1_cnldk"]
+[ext_resource type="Script" uid="uid://3o7n4pmvnodg" path="res://scripts/bat.gd" id="1_cnldk"]
 [ext_resource type="Texture2D" uid="uid://bs6q6kqu86gho" path="res://Assets/rat and bat spritesheet calciumtrice.png" id="1_uhqni"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cnldk"]
@@ -307,9 +307,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_13ly6"]
-radius = 7.071068
+radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78qe6"]
+radius = 17.029387
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3nfwx"]
+radius = 17.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=771616215]
 script = ExtResource("1_cnldk")
@@ -330,3 +334,12 @@ shape = SubResource("CircleShape2D_13ly6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1811609502]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_78qe6")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=693754527]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1091263582]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_3nfwx")
+
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
