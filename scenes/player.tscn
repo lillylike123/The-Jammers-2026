@@ -699,8 +699,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
+radius = 11.045361
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 11.045361
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dqkch"]
 radius = 4.609772
@@ -718,7 +720,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1554899029]
-position = Vector2(5.5, 5)
+position = Vector2(6, 5)
 shape = SubResource("CircleShape2D_qhqgy")
 debug_color = Color(0.8096832, 0.41290253, 0, 0.41960785)
 
@@ -727,7 +729,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox" unique_id=1028197561]
-position = Vector2(5.5, 5)
+position = Vector2(6, 5)
 shape = SubResource("CircleShape2D_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1751387027]
