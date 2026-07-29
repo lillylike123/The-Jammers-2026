@@ -53,6 +53,11 @@ region = Rect2(176, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fbqdi"]
 animations = [{
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_japoy")
@@ -104,14 +109,16 @@ animations = [{
 radius = 3.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_78qe6"]
-radius = 8.0
+radius = 8.944272
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nfwx"]
-radius = 16.0
+radius = 8.944272
 
 [node name="slime" type="CharacterBody2D" unique_id=516242411]
 script = ExtResource("1_mejc2")
-health = 50
+speed = 20.0
+max_health = 40
+contact_damage = 20
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383613717]
 sprite_frames = SubResource("SpriteFrames_fbqdi")

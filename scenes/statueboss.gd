@@ -106,7 +106,7 @@ func _update_animation() -> void:
 			_play("idle")
 			_flash_hurt()
 		State.DEAD:
-			_play("dying")
+			_play("death")
 
 func _play(anim_name: String) -> void:
 	if animated_sprite.sprite_frames and animated_sprite.sprite_frames.has_animation(anim_name):

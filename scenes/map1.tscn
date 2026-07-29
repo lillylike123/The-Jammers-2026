@@ -595,6 +595,7 @@ polygon = PackedVector2Array(1, 0, 26, 0, 26, 38, 0, 38, 0, -5, -4, 7, -5, 39, -
 
 [node name="player" parent="." unique_id=496868096 instance=ExtResource("4_x0ugi")]
 position = Vector2(10, 54)
+max_health = 250
 
 [node name="goblin" parent="." unique_id=883392267 instance=ExtResource("7_5vo6v")]
 position = Vector2(120, 21)
